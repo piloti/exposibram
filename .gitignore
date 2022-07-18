@@ -15,9 +15,11 @@ wp-content/plugins/hello.php
 wp-content/themes/twenty*/
 
 # ignore node dependency directories
-node_modules/
+wp-content/themes/exposibram/node_modules/
 
 # ignore log files and databases
 *.log
-*.sql
+# *.sql
 *.sqlite
+
+wp-config.php
