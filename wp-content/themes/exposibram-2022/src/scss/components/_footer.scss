@@ -33,6 +33,53 @@
       padding-bottom: 4px;
     }
   }
+
+  .menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      float: left;
+      width: 20%;
+
+      &:first-of-type {
+        display: none;
+      }
+
+      a {
+        font-size: 16px;
+        font-weight: 500;
+        color: white;
+        text-decoration: none;
+
+        &:hover {
+          color: $orange-e;
+        }
+      }
+
+      .sub-menu {
+        list-style: none;
+        padding: 0;
+        margin: 4px 0 0 0;
+        
+        li {
+          float: none;
+          width: 100%;
+          padding: 2px 0;
+
+          &:first-of-type {
+            display: block;
+          }
+
+          a {
+            font-size: 15px;
+            font-weight: 300;
+          }
+        }
+      }
+    }
+  }
 }
 
 .col-footer-1 {

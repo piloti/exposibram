@@ -16,7 +16,8 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-12 mb-4 mb-lg-5">
-				<div class="col-footer-1">
+				<?php wp_nav_menu(array('menu' => 'Menu Header')); ?>
+				<!-- <div class="col-footer-1">
 					<p class="text-uppercase mb-2 fw-500">Expo/Feira</p>
 					<ul class="ul-ft">
 						<li><a href="#">Sobre a exposição</a></li>
@@ -52,7 +53,7 @@
 						<li><a href="#">Exposição</a></li>
 						<li><a href="#">Congresso</a></li>
 					</ul>
-				</div>
+				</div> -->
 			</div>
 			<div class="col-12 mb-4 mb-lg-5">
 				<p>

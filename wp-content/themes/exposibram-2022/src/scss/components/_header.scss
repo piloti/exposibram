@@ -22,14 +22,21 @@
 
       li {
         display: inline-block;
-        padding: 0 30px;
+        margin: 0 30px;
+        position: relative;
 
         &:first-of-type {
-          padding: 0 30px 0 0;
+          margin: 0 30px 0 0;
         }
 
         &:last-of-type {
-          padding: 0 0 0 30px;
+          margin: 0 0 0 30px;
+        }
+
+        &:hover {
+          .sub-menu {
+            display: block;
+          }
         }
 
         a {
@@ -40,6 +47,7 @@
           text-transform: uppercase;
           line-height: 1.1;
           color: black;
+          position: relative;
 
           &:hover {
             color: $blue-e;
@@ -58,6 +66,58 @@
             }
           }
         }
+
+        &.menu-item-has-children {
+          a {
+            &::before {
+              content: "";
+              width: 8px;
+              height: 5px;
+              background-image: url("/wp-content/themes/exposibram-2022/dist/imgs/arrow_drop_down.png");
+              position: absolute;
+              top: 6px;
+              right: -13px;
+            }
+          }
+        }
+
+        .sub-menu {
+          display: none;
+          // padding-top: 30px;
+          position: absolute;
+          width: 220px;
+          left: 50%;
+          margin-left: -110px;
+          text-align: center;
+          padding-top: 26px;
+          
+
+          li {
+            margin: 0;
+            background-color: white;
+            width: 100%;
+            display: block;
+            padding: 7px 0;
+
+            &:first-of-type {
+              padding: 12px 0 7px 0;
+              border-top: .5px solid rgb(235, 235, 235);
+            }
+    
+            &:last-of-type {
+              padding: 7px 0 12px 0;
+            }
+
+            a {
+              font-size: 14px;
+              &::before {
+                display: none;
+              }
+            }
+          }
+          // top: 0;
+          // left: 0;
+        }
       }
     }
   }
@@ -66,5 +126,18 @@
 .admin-bar {
   .site-header {
     top: 32px;
+  }
+}
+
+
+.entry-header {
+  padding-top: 70px;
+  padding-bottom: 20px;
+  
+  h1 {
+    font-size: 48px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $blue-e;
   }
 }

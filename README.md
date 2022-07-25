@@ -25,3 +25,4 @@ Instalar e rodar os comandos CLI na pasta `wp-content/themes/exposibram`
 $ sudo npm install -g sass
 $ npm i bootstrap@5.2.0
 $ sass --watch src/scss/app.scss:style.css
+```

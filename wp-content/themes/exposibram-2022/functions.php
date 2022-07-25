@@ -171,6 +171,14 @@ function exposibram_2022_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'exposibram_2022_scripts' );
 
+/** CSS ADMIN */
+add_action('admin_enqueue_scripts', 'css_admin');
+
+function css_admin()
+{
+	wp_enqueue_style('admin-style', get_stylesheet_directory_uri() . '/style-admin.css');
+}
+
 /**
  * Implement the Custom Header feature.
  */
@@ -198,3 +206,27 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+// Block Patterns.
+require get_template_directory() . '/inc/block-patterns.php';
+
+
+function dtd_register_blocks() {
+
+	if ( ! function_exists( 'acf_register_block_type' ) ) {
+		return;
+	}
+
+	acf_register_block_type( [
+		'name'            => 'dtd_selected_posts',
+		'title'           => __( 'Post Collection Block', 'dtd' ),
+		'render_template' => 'template-parts/blocks/textbtn.php',
+		'category'        => 'formatting',
+		'icon'            => 'images-alt',
+		'mode'            => 'auto',
+		'keywords'        => [ 'most', 'post' ],
+		'supports'        => []
+	] );
+
+}
+
+add_action( 'acf/init', 'dtd_register_blocks' );
