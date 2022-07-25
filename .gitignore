@@ -15,7 +15,7 @@ wp-content/plugins/hello.php
 wp-content/themes/twenty*/
 
 # ignore node dependency directories
-wp-content/themes/exposibram/node_modules/
+wp-content/themes/exposibram-2022/node_modules/
 
 # ignore log files and databases
 *.log

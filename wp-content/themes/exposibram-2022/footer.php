@@ -1,4 +1,5 @@
 <?php
+
 /**
  * The template for displaying the footer
  *
@@ -11,24 +12,62 @@
 
 ?>
 
-	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'exposibram-2022' ) ); ?>">
-				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'exposibram-2022' ), 'WordPress' );
-				?>
-			</a>
-			<span class="sep"> | </span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'exposibram-2022' ), 'exposibram-2022', '<a href="https://piloti.com.br/">Piloti - Mobile & Internet</a>' );
-				?>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
-</div><!-- #page -->
+<footer id="colophon" class="site-footer">
+	<div class="container">
+		<div class="row">
+			<div class="col-12 mb-4 mb-lg-5">
+				<div class="col-footer-1">
+					<p class="text-uppercase mb-2 fw-500">Expo/Feira</p>
+					<ul class="ul-ft">
+						<li><a href="#">Sobre a exposição</a></li>
+						<li><a href="#">Área do visitante</a></li>
+						<li><a href="#">Mapa de estande</a></li>
+						<li><a href="#">Lista de expositores</a></li>
+						<li><a href="#">Área do expositor</a></li>
+					</ul>
+				</div>
+				<div class="col-footer-1">
+					<p class="text-uppercase mb-2 fw-500">Congresso</p>
+					<ul class="ul-ft">
+						<li><a href="#">Sobre o congresso</a></li>
+						<li><a href="#">Programação</a></li>
+						<li><a href="#">Convidados</a></li>
+					</ul>
+				</div>
+				<div class="col-footer-1">
+					<p class="text-uppercase mb-2 fw-500">Como participar</p>
+					<ul class="ul-ft">
+						<li><a href="#">Cotas de patrocínio</a></li>
+						<li><a href="#">Encartes promocionais</a></li>
+						<li><a href="#">Palestras técnicas</a></li>
+						<li><a href="#">Merchandising</a></li>
+					</ul>
+				</div>
+				<div class="col-footer-1">
+					teste
+				</div>
+				<div class="col-footer-1">
+					teste
+				</div>
+			</div>
+			<div class="col-12 mb-4 mb-lg-5">
+				<p>
+					Para mais informações, entre em contato conosco:<br>
+					+55 (31) 2626-0637 | <a href="mailto:secretaria@ibram.org.br">secretaria@ibram.org.br</a>
+				</p>
+			</div>
+			<div class="col-12">
+				<a href="https://ibram.org.br/" target="_blank" rel="noopener noreferrer" title="IBRAM" class="d-inline-block">
+					<img src="/wp-content/themes/exposibram-2022/dist/imgs/ibram.png" alt="IBRAM">
+				</a>
+			</div>
+		</div>
+	</div>
+</footer>
+</div>
 
 <?php wp_footer(); ?>
 
 </body>
+
 </html>

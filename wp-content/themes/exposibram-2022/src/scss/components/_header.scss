@@ -1,0 +1,70 @@
+.site-header {
+  width: 100%;
+  position: fixed;
+  background-color: rgba($color: white, $alpha: 0.9);
+  top: 0;
+  left: 0;
+  z-index: 10;
+  padding: 10px 0;
+  box-shadow: 0 3px 10px rgba($color: #000000, $alpha: 0.2);
+
+  .menu-expo {
+    .menu-toggle {
+      display: none;
+    }
+
+    ul {
+      display: block;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      text-align: center;
+
+      li {
+        display: inline-block;
+        padding: 0 30px;
+
+        &:first-of-type {
+          padding: 0 30px 0 0;
+        }
+
+        &:last-of-type {
+          padding: 0 0 0 30px;
+        }
+
+        a {
+          display: block;
+          font-size: 16px;
+          font-weight: 500;
+          text-decoration: none;
+          text-transform: uppercase;
+          line-height: 1.1;
+          color: black;
+
+          &:hover {
+            color: $blue-e;
+          }
+        }
+
+        &.btn-insceva {
+          a {
+            color: white;
+            padding: 16px 20px;
+            border-radius: 10px;
+            background-color: $blue-e;
+
+            &:hover {
+              background-color: $orange-e;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.admin-bar {
+  .site-header {
+    top: 32px;
+  }
+}

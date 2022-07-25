@@ -102,6 +102,28 @@ function exposibram_2022_setup() {
 }
 add_action( 'after_setup_theme', 'exposibram_2022_setup' );
 
+/** custom option page. **/
+if (function_exists('acf_add_options_page')) {
+
+	acf_add_options_page(array(
+		'page_title' 	=> 'Patrocinadores',
+		'menu_title'	=> 'Patrocinadores',
+		'menu_slug' 	=> 'theme-patrocinadores',
+		'capability'	=> 'edit_posts',
+		'position'      => '2',
+		'redirect'		=> false
+	));
+
+	// acf_add_options_page(array(
+	// 	'page_title' 	=> 'Footer',
+	// 	'menu_title'	=> 'Footer',
+	// 	'menu_slug' 	=> 'theme-footer',
+	// 	'capability'	=> 'edit_posts',
+	// 	'position'      => '2',
+	// 	'redirect'		=> false
+	// ));
+}
+
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
  *

@@ -1,0 +1,41 @@
+.site-footer {
+  position: relative;
+  background-color: $blue-e;
+  color: white;
+  padding: 65px 0 90px 0;
+
+  p {
+    font-size: 16px;
+    font-weight: 300;
+  }
+
+  a {
+    font-size: 16px;
+    font-weight: 300;
+    color: white;
+    text-decoration: none;
+
+    &:hover {
+      color: $orange-e;
+      // text-decoration: underline;
+    }
+  }
+
+  .ul-ft {
+    display: block;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      display: block;
+      width: 100%;
+      padding-bottom: 4px;
+    }
+  }
+}
+
+.col-footer-1 {
+  float: left;
+  width: 20%;
+}
