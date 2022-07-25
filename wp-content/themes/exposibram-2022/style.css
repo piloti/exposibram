@@ -11258,6 +11258,7 @@ body {
   z-index: 1;
   background-position: right;
   background-repeat: no-repeat;
+  background-size: contain;
 }
 
 .section-imgleft-text {
@@ -11288,6 +11289,7 @@ body {
   z-index: 1;
   background-position: left;
   background-repeat: no-repeat;
+  background-size: contain;
 }
 
 .section-blue-1 {
