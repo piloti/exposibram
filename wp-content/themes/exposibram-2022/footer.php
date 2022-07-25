@@ -44,10 +44,14 @@
 					</ul>
 				</div>
 				<div class="col-footer-1">
-					teste
+					<a href="#" class="text-uppercase mb-2 fw-500">Rodada de Negócios</a>
 				</div>
 				<div class="col-footer-1">
-					teste
+					<p class="text-uppercase mb-2 fw-500">Inscrição</p>
+					<ul class="ul-ft">
+						<li><a href="#">Exposição</a></li>
+						<li><a href="#">Congresso</a></li>
+					</ul>
 				</div>
 			</div>
 			<div class="col-12 mb-4 mb-lg-5">
