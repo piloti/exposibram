@@ -218,3 +218,51 @@ body {
     }
   }
 }
+
+.navExpo {
+  position: relative;
+  overflow: hidden;
+
+  .nav-tabs {
+    border: 0;
+    .nav-item {
+      padding: 0 5px;
+      &:first-of-type {
+        padding: 0 5px 0 0;
+      }
+      &:last-of-type {
+        padding: 0 0 0 5px;
+      }
+    }
+    .nav-link {
+      width: 100%;
+      border: 0;
+      font-size: 40px;
+      font-weight: 700;
+      color: white;
+      background-color: $blue-e;
+      border-top-left-radius: 16px;
+      border-top-right-radius: 16px;
+
+      &.active {
+        background-color: $orange-e;
+      }
+    }
+  }
+
+  .tab-content {
+    .tab-bg {
+      padding: 24px 0 19px 0;
+      margin-left: -12px;
+      margin-right: -12px;
+      background-color: $orange-e;
+
+      h3 {
+        font-size: 32px;
+        font-weight: 600;
+        color: white;
+        margin-bottom: 0;
+      }
+    }
+  }
+}

@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 .title-1 {
@@ -47,6 +47,12 @@ body {
 
 p {
   font-size: 18px;
+  font-weight: 300;
+}
+
+strong,
+b {
+  font-weight: 600;
 }
 
 .fs-20 {
@@ -59,4 +65,14 @@ p {
 
 .fs-40 {
   font-size: 40px;
+}
+
+.p-fs-26 {
+  p {
+    font-size: 26px;
+    strong,
+    b {
+      font-weight: 600;
+    }
+  }
 }
