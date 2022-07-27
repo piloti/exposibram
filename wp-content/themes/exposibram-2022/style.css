@@ -11670,5 +11670,52 @@ body {
     background-size: cover;
   }
 }
+@media (max-width: 991px) {
+  .title-1 {
+    font-size: 32px;
+  }
+  p {
+    font-size: 16px;
+  }
+  .fs-20 {
+    font-size: 18px;
+  }
+  .btn {
+    font-size: 18px;
+  }
+  .btn.btn-orange {
+    padding: 16px 30px;
+  }
+  .btn.btn-blue {
+    padding: 16px 30px;
+  }
+  .section-text-imgright {
+    padding: 60px 0;
+  }
+  .section-text-imgright .foto {
+    display: none;
+  }
+  .section-imgleft-text {
+    padding: 60px 0;
+  }
+  .section-imgleft-text .foto {
+    display: none;
+  }
+  .section-blue-1 {
+    padding: 60px 0;
+  }
+  .section-blue-1 h3, .section-blue-1 .h3 {
+    font-size: 22px;
+  }
+  .card-white {
+    padding: 25px 20px;
+  }
+  .card-white p {
+    font-size: 17px;
+  }
+  .card-white p strong {
+    font-size: 22px;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */
