@@ -177,11 +177,11 @@ body {
 
     &::before {
       content: "";
-      width: 42%;
+      width: 52%;
       height: 140%;
       background-color: white;
       position: absolute;
-      top: -110px;
+      top: -180px;
       right: 0;
       transform: rotate(-16deg);
       z-index: 1;
@@ -189,14 +189,14 @@ body {
 
     &::after {
       content: "";
-      width: 54%;
+      width: 64%;
       height: 100%;
       background-color: white;
       position: absolute;
       top: -102px;
-      right: -30px;
+      right: 0;
       z-index: 1;
-      transform: scale(1.2) translate(-56px, 390px) skew(5deg, 60deg);
+      transform: rotate(101deg);
     }
   }
 
