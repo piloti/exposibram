@@ -11650,5 +11650,25 @@ body {
     transform: rotate(55deg);
   }
 }
+@media (max-width: 1200px) {
+  .site-header .menu-expo ul li {
+    margin: 0 20px;
+  }
+  .site-header .menu-expo ul li:first-of-type {
+    margin: 0 20px 0 0;
+  }
+  .site-header .menu-expo ul li:last-of-type {
+    margin: 0 0 0 20px;
+  }
+  .section-imgleft-text .bg-1::before {
+    width: 62%;
+    height: 140%;
+    top: -110px;
+    right: -170px;
+  }
+  .section-imgleft-text .foto {
+    background-size: cover;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */

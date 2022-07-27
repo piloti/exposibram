@@ -392,6 +392,7 @@ body {
   }
 }
 
+// RESPONSIVO
 @media (max-width: 1380px) {
   .section-text-imgright {
     .bg-1 {
@@ -401,6 +402,37 @@ body {
         left: -380px;
         transform: rotate(55deg);
       }
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .site-header {
+    .menu-expo {
+      ul {
+        li {
+          margin: 0 20px;
+          &:first-of-type {
+            margin: 0 20px 0 0;
+          }
+          &:last-of-type {
+            margin: 0 0 0 20px;
+          }
+        }
+      }
+    }
+  }
+  .section-imgleft-text {
+    .bg-1 {
+      &::before {
+        width: 62%;
+        height: 140%;
+        top: -110px;
+        right: -170px;
+      }
+    }
+    .foto {
+      background-size: cover;
     }
   }
 }
