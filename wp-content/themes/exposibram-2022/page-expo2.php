@@ -1,7 +1,7 @@
 <?php
 
 /**
- * The template for displaying all pages
+ * Template Name: EXPO Theme 2
  *
  * This is the template that displays all pages by default.
  * Please note that this is the WordPress construct of pages
@@ -30,7 +30,7 @@ get_header();
 		</div>
 
 		<div class="row">
-			<div class="col-12">
+			<div class="col-12 p-fs-28">
 				<?php the_content(); ?>
 			</div>
 		</div>

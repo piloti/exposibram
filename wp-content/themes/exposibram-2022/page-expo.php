@@ -46,6 +46,7 @@ get_header();
 
 		<?php if (get_field('title_panelist') != "") { ?>
 			<section class="row justify-content-center mb-4 mb-lg-5">
+				<span class="id-top" id="<?php the_field('id_palestrante'); ?>"></span>
 				<div class="col-12">
 					<h2 class="title-1"><strong><?php the_field('title_panelist'); ?></strong></h2>
 				</div>
@@ -68,6 +69,7 @@ get_header();
 
 	<?php if (get_field('title_progr') != "") { ?>
 		<section class="container-fluid navExpo">
+			<span class="id-top" id="<?php the_field('id_programacao'); ?>"></span>
 			<div class="row">
 				<div class="col-12">
 					<div class="container">
@@ -79,7 +81,9 @@ get_header();
 								<ul class="nav nav-tabs justify-content-center" id="myTab" role="tablist">
 									<?php foreach (get_field('add_progr') as $key => $value) : ?>
 										<li class="nav-item col" role="presentation">
-											<button class="nav-link <?php if($key == 0){ echo ' active ';} ?>" id="dia-<?= $value['dia'] ?>-tab" data-bs-toggle="tab" data-bs-target="#dia-<?= $value['dia'] ?>" type="button" role="tab" aria-controls="dia-<?= $value['dia'] ?>" aria-selected="true">DIA <?= $value['dia'] ?></button>
+											<button class="nav-link <?php if ($key == 0) {
+																								echo ' active ';
+																							} ?>" id="dia-<?= $value['dia'] ?>-tab" data-bs-toggle="tab" data-bs-target="#dia-<?= $value['dia'] ?>" type="button" role="tab" aria-controls="dia-<?= $value['dia'] ?>" aria-selected="true">DIA <?= $value['dia'] ?></button>
 										</li>
 									<?php endforeach; ?>
 								</ul>
@@ -88,7 +92,9 @@ get_header();
 					</div>
 					<div class="tab-content" id="myTabContent">
 						<?php foreach (get_field('add_progr') as $key => $value) : ?>
-							<div class="tab-pane fade show <?php if($key == 0){ echo ' active ';} ?>" id="dia-<?= $value['dia'] ?>" role="tabpanel" aria-labelledby="dia-<?= $value['dia'] ?>-tab" tabindex="0">
+							<div class="tab-pane fade show <?php if ($key == 0) {
+																								echo ' active ';
+																							} ?>" id="dia-<?= $value['dia'] ?>" role="tabpanel" aria-labelledby="dia-<?= $value['dia'] ?>-tab" tabindex="0">
 								<?php foreach ($value['add_auditorio'] as $key2 => $value2) : ?>
 									<div class="mb-4 mb-lg-5">
 										<div class="tab-bg">
@@ -108,14 +114,82 @@ get_header();
 											</div>
 										</div>
 									</div>
-									<?php endforeach; ?>
-								</div>
+								<?php endforeach; ?>
+							</div>
 						<?php endforeach; ?>
 					</div>
 				</div>
 			</div>
 		</section>
 	<?php } ?>
+
+	<?php if (get_field('title_list1') != "") { ?>
+		<section class="container my-4 my-lg-5 not-mb">
+			<span class="id-top" id="<?php the_field('id_lista'); ?>"></span>
+			<div class="row  align-items-center">
+				<div class="col-12 mb-3">
+					<h2 class="title-1"><strong><?php the_field('title_list1'); ?></strong></h2>
+				</div>
+
+				<div class="col-lg-9">
+					<?php the_field('description_list1'); ?>
+				</div>
+				<div class="col-lg-3 text-center text-lg-end">
+					<a href="<?php the_field('link_list1'); ?>" target="_blank" rel="noopener noreferrer" title="Clique aqui" class="btn btn-blue">CLIQUE AQUI</a>
+				</div>
+			</div>
+		</section>
+	<?php } ?>
+
+	<?php if (get_field('title_estandes') != "") { ?>
+		<section class="container my-4 my-lg-5 pt-0 pt-lg-4">
+			<span class="id-top" id="<?php the_field('id_mapa'); ?>"></span>
+			<div class="row  align-items-center justify-content-center">
+				<div class="col-12 mb-3">
+					<h2 class="title-1"><strong><?php the_field('title_estandes'); ?></strong></h2>
+				</div>
+
+				<div class="col-lg-9 text-center">
+					<img src="<?php the_field('map_estande'); ?>" alt="Mapa" class="img-fluid">
+				</div>
+			</div>
+		</section>
+	<?php } ?>
+
+	<?php if (get_field('title_expositor') != "") { ?>
+		<section class="container my-4 my-lg-5 pt-0 pt-lg-4 not-mb">
+			<span class="id-top" id="<?php the_field('id_expositor'); ?>"></span>
+			<div class="row  align-items-center">
+				<div class="col-12 mb-3">
+					<h2 class="title-1"><strong><?php the_field('title_expositor'); ?></strong></h2>
+				</div>
+
+				<div class="col-lg-9">
+					<?php the_field('description_expositor'); ?>
+				</div>
+				<div class="col-lg-3 text-center text-lg-end">
+					<a href="<?php the_field('link_expositor'); ?>" target="_blank" rel="noopener noreferrer" title="Clique aqui" class="btn btn-blue">CLIQUE AQUI</a>
+				</div>
+			</div>
+		</section>
+	<?php } ?>
+
+	<?php if (get_field('title_agencia') != "") { ?>
+		<section class="container my-4 my-lg-5 pt-0 pt-lg-4 not-mb">
+			<span class="id-top" id="<?php the_field('id_agencia'); ?>"></span>
+			<div class="row  align-items-center">
+				<div class="col-12 mb-3">
+					<h2 class="title-1"><strong><?php the_field('title_agencia'); ?></strong></h2>
+				</div>
+
+				<div class="col-12">
+					<?php the_field('description_agencia'); ?>
+				</div>
+			</div>
+		</section>
+	<?php } ?>
+
+	<?php get_template_part('template-parts/patrocinadores'); ?>
 
 </main><!-- #main -->
 
