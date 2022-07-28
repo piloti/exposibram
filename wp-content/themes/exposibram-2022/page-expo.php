@@ -135,7 +135,12 @@ get_header();
 					<?php the_field('description_list1'); ?>
 				</div>
 				<div class="col-lg-3 text-center text-lg-end">
-					<a href="<?php the_field('link_list1'); ?>" target="_blank" rel="noopener noreferrer" title="Clique aqui" class="btn btn-blue">CLIQUE AQUI</a>
+					<?php $currentlang = get_bloginfo('language');
+					if ($currentlang == "pt-BR") : ?>
+						<a href="<?php the_field('link_list1'); ?>" target="_blank" rel="noopener noreferrer" title="Clique aqui" class="btn btn-blue">CLIQUE AQUI</a>
+					<?php elseif ($currentlang == "en-US") : ?>
+						<a href="<?php the_field('link_list1'); ?>" target="_blank" rel="noopener noreferrer" title="CLICK HERE" class="btn btn-blue">CLICK HERE</a>
+					<?php endif; ?>
 				</div>
 			</div>
 		</section>
@@ -168,7 +173,12 @@ get_header();
 					<?php the_field('description_expositor'); ?>
 				</div>
 				<div class="col-lg-3 text-center text-lg-end">
-					<a href="<?php the_field('link_expositor'); ?>" target="_blank" rel="noopener noreferrer" title="Clique aqui" class="btn btn-blue">CLIQUE AQUI</a>
+					<?php $currentlang = get_bloginfo('language');
+					if ($currentlang == "pt-BR") : ?>
+						<a href="<?php the_field('link_expositor'); ?>" target="_blank" rel="noopener noreferrer" title="Clique aqui" class="btn btn-blue">CLIQUE AQUI</a>
+					<?php elseif ($currentlang == "en-US") : ?>
+						<a href="<?php the_field('link_expositor'); ?>" target="_blank" rel="noopener noreferrer" title="CLICK HERE" class="btn btn-blue">CLICK HERE</a>
+					<?php endif; ?>
 				</div>
 			</div>
 		</section>

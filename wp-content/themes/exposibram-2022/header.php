@@ -20,9 +20,9 @@
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 
 	<?php wp_head(); ?>
-	<script src="/wp-content/themes/exposibram-2022/dist/js/jquery-3.6.0.min.js"></script>
-	<script src="/wp-content/themes/exposibram-2022/dist/js/bootstrap.min.js"></script>
-	<script src="/wp-content/themes/exposibram-2022/dist/js/owl.carousel.min.js"></script>
+	<script src="<?php echo get_bloginfo('template_directory'); ?>/dist/js/jquery-3.6.0.min.js"></script>
+	<script src="<?php echo get_bloginfo('template_directory'); ?>/dist/js/bootstrap.min.js"></script>
+	<script src="<?php echo get_bloginfo('template_directory'); ?>/dist/js/owl.carousel.min.js"></script>
 
 </head>
 
@@ -37,7 +37,19 @@
 					<div class="col-12">
 						<nav id="site-navigation" class="main-navigation menu-expo">
 							<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e('Primary Menu', 'exposibram-2022'); ?></button>
-							<?php wp_nav_menu(array('menu' => 'Menu Header')); ?>
+
+							<?php $currentlang = get_bloginfo('language');
+							if ($currentlang == "pt-BR") : ?>
+								<?php wp_nav_menu(array('menu' => 'Menu Header PT')); ?>
+							<?php elseif ($currentlang == "en-US") : ?>
+								<?php wp_nav_menu(array('menu' => 'Menu Header EN')); ?>
+							<?php endif; ?>
+							
+							<div class="lang">
+								<ul>
+									<?php pll_the_languages(); ?>
+								</ul>
+							</div>
 						</nav>
 					</div>
 				</div>

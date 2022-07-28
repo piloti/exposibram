@@ -36,7 +36,12 @@ get_header();
             <h3 class="title-1"><strong><?php the_field('title_evento'); ?></strong></h3>
             <?php the_field('descricao_evento'); ?>
 
-            <a href="<?php the_field('link_evento'); ?>" class="btn btn-orange" title="saiba mais">SAIBA MAIS</a>
+            <?php $currentlang = get_bloginfo('language');
+            if ($currentlang == "pt-BR") : ?>
+              <a href="<?php the_field('link_evento'); ?>" class="btn btn-orange" title="saiba mais">SAIBA MAIS</a>
+            <?php elseif ($currentlang == "en-US") : ?>
+              <a href="<?php the_field('link_evento'); ?>" class="btn btn-orange" title="know more">KNOW MORE</a>
+            <?php endif; ?>
           </div>
         </div>
       </div>
@@ -73,7 +78,12 @@ get_header();
             <h3 class="title-1"><strong><?php the_field('titulo_congresso'); ?></strong></h3>
             <?php the_field('descricao_congresso'); ?>
 
-            <a href="<?php the_field('link_congresso'); ?>" class="btn btn-orange" title="saiba mais">SAIBA MAIS</a>
+            <?php $currentlang = get_bloginfo('language');
+            if ($currentlang == "pt-BR") : ?>
+              <a href="<?php the_field('link_congresso'); ?>" class="btn btn-orange" title="saiba mais">SAIBA MAIS</a>
+            <?php elseif ($currentlang == "en-US") : ?>
+              <a href="<?php the_field('link_congresso'); ?>" class="btn btn-orange" title="know more">KNOW MORE</a>
+            <?php endif; ?>
           </div>
         </div>
       </div>

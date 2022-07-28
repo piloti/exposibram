@@ -16,55 +16,39 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-12 mb-4 mb-lg-5">
-				<?php wp_nav_menu(array('menu' => 'Menu Header')); ?>
-				<!-- <div class="col-footer-1">
-					<p class="text-uppercase mb-2 fw-500">Expo/Feira</p>
-					<ul class="ul-ft">
-						<li><a href="#">Sobre a exposição</a></li>
-						<li><a href="#">Área do visitante</a></li>
-						<li><a href="#">Mapa de estande</a></li>
-						<li><a href="#">Lista de expositores</a></li>
-						<li><a href="#">Área do expositor</a></li>
-					</ul>
-				</div>
-				<div class="col-footer-1">
-					<p class="text-uppercase mb-2 fw-500">Congresso</p>
-					<ul class="ul-ft">
-						<li><a href="#">Sobre o congresso</a></li>
-						<li><a href="#">Programação</a></li>
-						<li><a href="#">Convidados</a></li>
-					</ul>
-				</div>
-				<div class="col-footer-1">
-					<p class="text-uppercase mb-2 fw-500">Como participar</p>
-					<ul class="ul-ft">
-						<li><a href="#">Cotas de patrocínio</a></li>
-						<li><a href="#">Encartes promocionais</a></li>
-						<li><a href="#">Palestras técnicas</a></li>
-						<li><a href="#">Merchandising</a></li>
-					</ul>
-				</div>
-				<div class="col-footer-1">
-					<a href="#" class="text-uppercase mb-2 fw-500">Rodada de Negócios</a>
-				</div>
-				<div class="col-footer-1">
-					<p class="text-uppercase mb-2 fw-500">Inscrição</p>
-					<ul class="ul-ft">
-						<li><a href="#">Exposição</a></li>
-						<li><a href="#">Congresso</a></li>
-					</ul>
-				</div> -->
+				<?php $currentlang = get_bloginfo('language');
+				if ($currentlang == "pt-BR") : ?>
+					<?php wp_nav_menu(array('menu' => 'Menu Header PT')); ?>
+				<?php elseif ($currentlang == "en-US") : ?>
+					<?php wp_nav_menu(array('menu' => 'Menu Header EN')); ?>
+				<?php endif; ?>
 			</div>
 			<div class="col-12 mb-4 mb-lg-5">
-				<p>
-					Para mais informações, entre em contato conosco:<br>
-					+55 (31) 2626-0637 | <a href="mailto:secretaria@ibram.org.br">secretaria@ibram.org.br</a>
-				</p>
+				<?php $currentlang = get_bloginfo('language');
+				if ($currentlang == "pt-BR") : ?>
+					<p>
+						Para mais informações, entre em contato conosco:<br>
+						+55 (31) 2626-0637 | <a href="mailto:secretaria@ibram.org.br">secretaria@ibram.org.br</a>
+					</p>
+				<?php elseif ($currentlang == "en-US") : ?>
+					<p>
+						For more information, contact us:<br>
+						+55 (31) 2626-0637 | <a href="mailto:secretaria@ibram.org.br">secretaria@ibram.org.br</a>
+					</p>
+				<?php endif; ?>
 			</div>
 			<div class="col-12">
-				<a href="https://ibram.org.br/" target="_blank" rel="noopener noreferrer" title="IBRAM" class="d-inline-block">
-					<img src="/wp-content/themes/exposibram-2022/dist/imgs/ibram.png" alt="IBRAM">
-				</a>
+				<?php $currentlang = get_bloginfo('language');
+				if ($currentlang == "pt-BR") : ?>
+					<a href="https://ibram.org.br/" target="_blank" rel="noopener noreferrer" title="IBRAM" class="d-inline-block">
+						<img src="<?php echo get_bloginfo('template_directory'); ?>/dist/imgs/ibram.png" alt="IBRAM">
+					</a>
+				<?php elseif ($currentlang == "en-US") : ?>
+					<a href=https://ibram.org.br/en/" target="_blank" rel="noopener noreferrer" title="IBRAM" class="d-inline-block">
+						<img src="<?php echo get_bloginfo('template_directory'); ?>/dist/imgs/ibram.png" alt="IBRAM">
+					</a>
+				<?php endif; ?>
+
 			</div>
 		</div>
 	</div>
