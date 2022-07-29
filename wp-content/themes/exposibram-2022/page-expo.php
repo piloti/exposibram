@@ -186,6 +186,24 @@ get_header();
 		</section>
 	<?php } ?>
 
+	<?php if (get_field('titulo_concurso') != "") { ?>
+		<section class="container section-content">
+			<span class="id-top" id="<?php the_field('id_concurso'); ?>"></span>
+			<div class="row  align-items-center">
+				<div class="col-12 mb-3">
+					<h2 class="title-1"><strong><?php the_field('titulo_concurso'); ?></strong></h2>
+				</div>
+
+				<div class="col-12 mb-4">
+					<?php the_field('descricao_concurso'); ?>
+				</div>
+				<div class="col-12">
+					<a href="<?php the_field('link_concurso'); ?>" target="_blank" rel="noopener noreferrer" title="<?php the_field('text_link_concurso'); ?>" class="btn btn-blue"><?php the_field('text_link_concurso'); ?></a>
+				</div>
+			</div>
+		</section>
+	<?php } ?>
+
 	<?php if (get_field('title_agencia') != "") { ?>
 		<section class="container section-content">
 			<span class="id-top" id="<?php the_field('id_agencia'); ?>"></span>
