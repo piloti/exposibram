@@ -80,9 +80,9 @@ get_header();
 
             <?php $currentlang = get_bloginfo('language');
             if ($currentlang == "pt-BR") : ?>
-              <a href="<?php the_field('link_congresso'); ?>" class="btn btn-orange" title="saiba mais">SAIBA MAIS</a>
+              <a href="<?php the_field('link_congresso'); ?>" class="btn btn-orange" title="Clique para Congresso">Clique para Congresso</a>
             <?php elseif ($currentlang == "en-US") : ?>
-              <a href="<?php the_field('link_congresso'); ?>" class="btn btn-orange" title="know more">KNOW MORE</a>
+              <a href="<?php the_field('link_congresso'); ?>" class="btn btn-orange" title="Click to Congress">Click to Congress</a>
             <?php endif; ?>
           </div>
         </div>
