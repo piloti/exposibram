@@ -45,7 +45,7 @@ get_header();
 		</div>
 
 		<?php if (get_field('title_expositor') != "") { ?>
-			<section class="container my-4 my-lg-5 pt-0 pt-lg-4 not-mb">
+			<section class="container section-content">
 				<span class="id-top" id="<?php the_field('id_expositor'); ?>"></span>
 				<div class="row  align-items-center">
 					<div class="col-12 mb-3">
@@ -68,7 +68,7 @@ get_header();
 		<?php } ?>
 
 		<?php if (get_field('title_estandes') != "") { ?>
-			<section class="container my-4 my-lg-5 pt-0 pt-lg-4">
+			<section class="container section-content">
 				<span class="id-top" id="<?php the_field('id_mapa'); ?>"></span>
 				<div class="row  align-items-center justify-content-center">
 					<div class="col-12 mb-3">
@@ -84,7 +84,7 @@ get_header();
 	</section>
 
 	<?php if (get_field('title_list1') != "") { ?>
-		<section class="container my-4 my-lg-5 not-mb">
+		<section class="container section-content">
 			<span class="id-top" id="<?php the_field('id_lista'); ?>"></span>
 			<div class="row  align-items-center">
 				<div class="col-12 mb-3">
@@ -107,7 +107,7 @@ get_header();
 	<?php } ?>
 
 	<?php if (get_field('title_progr') != "") { ?>
-		<section class="container-fluid navExpo">
+		<section class="container-fluid navExpo section-content">
 			<span class="id-top" id="<?php the_field('id_programacao'); ?>"></span>
 			<div class="row">
 				<div class="col-12">
@@ -163,7 +163,7 @@ get_header();
 	<?php } ?>
 
 	<?php if (get_field('title_panelist') != "") { ?>
-		<section class="container mb-4 mb-lg-5">
+		<section class="container section-content pt-0">
 			<div class="row justify-content-center">
 				<span class="id-top" id="<?php the_field('id_palestrante'); ?>"></span>
 				<div class="col-12">
@@ -187,7 +187,7 @@ get_header();
 	<?php } ?>
 
 	<?php if (get_field('title_agencia') != "") { ?>
-		<section class="container my-4 my-lg-5 pt-0 pt-lg-4 not-mb">
+		<section class="container section-content">
 			<span class="id-top" id="<?php the_field('id_agencia'); ?>"></span>
 			<div class="row  align-items-center">
 				<div class="col-12 mb-3">

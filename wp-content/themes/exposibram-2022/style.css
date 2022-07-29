@@ -11690,6 +11690,11 @@ body {
   height: auto;
 }
 
+.section-content {
+  padding-top: 65px;
+  padding-bottom: 45px;
+}
+
 @media (max-width: 1380px) {
   .section-text-imgright .bg-1::before {
     width: 100%;
