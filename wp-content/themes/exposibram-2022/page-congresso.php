@@ -58,45 +58,7 @@ get_header();
 				</div>
 			</section>
 		<?php } ?>
-
-		<?php if (get_field('title_estandes') != "") { ?>
-			<section class="container section-content">
-				<span class="id-top" id="<?php the_field('id_mapa'); ?>"></span>
-				<div class="row  align-items-center justify-content-center">
-					<div class="col-12 mb-3">
-						<h2 class="title-1"><strong><?php the_field('title_estandes'); ?></strong></h2>
-					</div>
-
-					<div class="col-lg-9 text-center">
-						<img src="<?php the_field('map_estande'); ?>" alt="Mapa" class="img-fluid">
-					</div>
-				</div>
-			</section>
-		<?php } ?>
 	</section>
-
-	<?php if (get_field('title_list1') != "") { ?>
-		<section class="container section-content">
-			<span class="id-top" id="<?php the_field('id_lista'); ?>"></span>
-			<div class="row  align-items-center">
-				<div class="col-12 mb-3">
-					<h2 class="title-1"><strong><?php the_field('title_list1'); ?></strong></h2>
-				</div>
-
-				<div class="col-lg-9">
-					<?php the_field('description_list1'); ?>
-				</div>
-				<div class="col-lg-3 text-center text-lg-end">
-					<?php $currentlang = get_bloginfo('language');
-					if ($currentlang == "pt-BR") : ?>
-						<a href="<?php the_field('link_list1'); ?>" target="_blank" rel="noopener noreferrer" title="Clique aqui" class="btn btn-blue">CLIQUE AQUI</a>
-					<?php elseif ($currentlang == "en-US") : ?>
-						<a href="<?php the_field('link_list1'); ?>" target="_blank" rel="noopener noreferrer" title="CLICK HERE" class="btn btn-blue">CLICK HERE</a>
-					<?php endif; ?>
-				</div>
-			</div>
-		</section>
-	<?php } ?>
 
 	<?php if (get_field('title_progr') != "") { ?>
 		<section class="container-fluid navExpo section-content">
@@ -178,19 +140,96 @@ get_header();
 		</section>
 	<?php } ?>
 
-	<?php if (get_field('titulo_concurso') != "") { ?>
+	<?php if (get_field('titulo_vl') != "") { ?>
 		<section class="container section-content">
-			<span class="id-top" id="<?php the_field('id_concurso'); ?>"></span>
+			<span class="id-top" id="<?php the_field('id_vl'); ?>"></span>
 			<div class="row  align-items-center">
 				<div class="col-12 mb-3">
-					<h2 class="title-1"><strong><?php the_field('titulo_concurso'); ?></strong></h2>
+					<h2 class="title-1"><strong><?php the_field('titulo_vl'); ?></strong></h2>
 				</div>
 
-				<div class="col-12 mb-4">
-					<?php the_field('descricao_concurso'); ?>
-				</div>
 				<div class="col-12">
-					<a href="<?php the_field('link_concurso'); ?>" target="_blank" rel="noopener noreferrer" title="<?php the_field('text_link_concurso'); ?>" class="btn btn-blue"><?php the_field('text_link_concurso'); ?></a>
+					<?php the_field('descricao_vl'); ?>
+				</div>
+			</div>
+		</section>
+	<?php } ?>
+
+	<?php if (get_field('titulo_gm') != "") { ?>
+		<section class="container-fluid navExpo section-content">
+			<span class="id-top" id="<?php the_field('id_gm'); ?>"></span>
+			<div class="row">
+				<div class="col-12">
+					<div class="container">
+						<div class="row">
+							<div class="col-12 mt-2 mb-3">
+								<h2 class="title-1"><strong><?php the_field('titulo_gm'); ?></strong></h2>
+							</div>
+							<div class="col-12">
+								<ul class="nav nav-tabs justify-content-center" id="myTab" role="tablist">
+									<?php foreach (get_field('add_grade') as $key => $value) : ?>
+										<li class="nav-item col" role="presentation">
+											<button class="nav-link <?php if ($key == 0) {
+																								echo ' active ';
+																							} ?>" id="dia-<?= $value['dia'] ?>-tab" data-bs-toggle="tab" data-bs-target="#dia-<?= $value['dia'] ?>" type="button" role="tab" aria-controls="dia-<?= $value['dia'] ?>" aria-selected="true">DIA <?= $value['dia'] ?></button>
+										</li>
+									<?php endforeach; ?>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="tab-content" id="myTabContent">
+						<?php foreach (get_field('add_grade') as $key => $value) : ?>
+							<div class="tab-pane fade show <?php if ($key == 0) {
+																								echo ' active ';
+																							} ?>" id="dia-<?= $value['dia'] ?>" role="tabpanel" aria-labelledby="dia-<?= $value['dia'] ?>-tab" tabindex="0">
+								<?php foreach ($value['add_auditorio'] as $key2 => $value2) : ?>
+									<div class="mb-4 mb-lg-5">
+										<div class="tab-bg">
+											<div class="container">
+												<div class="row justify-content-center">
+													<div class="col-lg-10">
+														<h3><?= $value2['titulo_aud'] ?></h3>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="container mt-4">
+											<div class="row justify-content-center">
+												<div class="col-lg-10">
+													<?= $value2['descricao_aud'] ?>
+												</div>
+											</div>
+										</div>
+									</div>
+								<?php endforeach; ?>
+							</div>
+						<?php endforeach; ?>
+					</div>
+				</div>
+			</div>
+		</section>
+	<?php } ?>
+
+	<?php if (get_field('titulo_pm') != "") { ?>
+		<section class="container section-content pt-0">
+			<div class="row justify-content-center">
+				<span class="id-top" id="<?php the_field('id_pm'); ?>"></span>
+				<div class="col-12">
+					<h2 class="title-1"><strong><?php the_field('titulo_pm'); ?></strong></h2>
+				</div>
+
+				<div class="col-lg-11">
+					<div class="row gx-5 mt-4">
+						<?php foreach (get_field('add_palemini') as $key => $value) : ?>
+							<div class="col-md-6 col-lg-4 mb-4 text-center">
+								<img src="<?= $value['foto'] ?>" alt="<?= $value['nome'] ?>" class="w-100">
+								<p class="mb-0"><strong><?= $value['nome'] ?></strong></p>
+								<p class="mb-0"><strong><?= $value['emprensa'] ?></strong></p>
+								<p class="mb-0"><?= $value['descricao'] ?></p>
+							</div>
+						<?php endforeach; ?>
+					</div>
 				</div>
 			</div>
 		</section>
