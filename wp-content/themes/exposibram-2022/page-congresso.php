@@ -44,24 +44,16 @@ get_header();
 			</div>
 		</div>
 
-		<?php if (get_field('title_expositor') != "") { ?>
+		<?php if (get_field('titulo_vcongresso') != "") { ?>
 			<section class="container section-content">
-				<span class="id-top" id="<?php the_field('id_expositor'); ?>"></span>
+				<span class="id-top" id="<?php the_field('id_vcongresso'); ?>"></span>
 				<div class="row  align-items-center">
 					<div class="col-12 mb-3">
-						<h2 class="title-1"><strong><?php the_field('title_expositor'); ?></strong></h2>
+						<h2 class="title-1"><strong><?php the_field('titulo_vcongresso'); ?></strong></h2>
 					</div>
 
-					<div class="col-lg-9">
-						<?php the_field('description_expositor'); ?>
-					</div>
-					<div class="col-lg-3 text-center text-lg-end">
-						<?php $currentlang = get_bloginfo('language');
-						if ($currentlang == "pt-BR") : ?>
-							<a href="<?php the_field('link_expositor'); ?>" target="_blank" rel="noopener noreferrer" title="Clique aqui" class="btn btn-blue">CLIQUE AQUI</a>
-						<?php elseif ($currentlang == "en-US") : ?>
-							<a href="<?php the_field('link_expositor'); ?>" target="_blank" rel="noopener noreferrer" title="CLICK HERE" class="btn btn-blue">CLICK HERE</a>
-						<?php endif; ?>
+					<div class="col-12">
+						<?php the_field('descricao_vcongresso'); ?>
 					</div>
 				</div>
 			</section>
