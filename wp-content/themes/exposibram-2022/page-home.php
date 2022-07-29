@@ -58,7 +58,7 @@ get_header();
 
             <div class="row justify-content-center gx-5">
               <?php foreach (get_field('cards') as $key => $value) : ?>
-                <div class="col-md-4">
+                <div class="col-md-3 mb-4">
                   <div class="card-white">
                     <p class="text-uppercase text-center mb-2"><?= $value['titulo'] ?></p>
                     <p class="text-center mb-0"><strong><?= $value['numero'] ?></strong></p>
