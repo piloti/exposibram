@@ -81,28 +81,6 @@ get_header();
 				</div>
 			</section>
 		<?php } ?>
-
-		<?php if (get_field('title_panelist') != "") { ?>
-			<section class="row justify-content-center mb-4 mb-lg-5">
-				<span class="id-top" id="<?php the_field('id_palestrante'); ?>"></span>
-				<div class="col-12">
-					<h2 class="title-1"><strong><?php the_field('title_panelist'); ?></strong></h2>
-				</div>
-
-				<div class="col-lg-11">
-					<div class="row gx-5 mt-4">
-						<?php foreach (get_field('add_panelist') as $key => $value) : ?>
-							<div class="col-md-6 col-lg-4 mb-4 text-center">
-								<img src="<?= $value['foto'] ?>" alt="<?= $value['nome'] ?>" class="w-100">
-								<p class="mb-0"><strong><?= $value['nome'] ?></strong></p>
-								<p class="mb-0"><strong><?= $value['emprensa'] ?></strong></p>
-								<p class="mb-0"><?= $value['descricao'] ?></p>
-							</div>
-						<?php endforeach; ?>
-					</div>
-				</div>
-			</section>
-		<?php } ?>
 	</section>
 
 	<?php if (get_field('title_progr') != "") { ?>
@@ -153,6 +131,30 @@ get_header();
 										</div>
 									</div>
 								<?php endforeach; ?>
+							</div>
+						<?php endforeach; ?>
+					</div>
+				</div>
+			</div>
+		</section>
+	<?php } ?>
+
+	<?php if (get_field('title_panelist') != "") { ?>
+		<section class="container mb-4 mb-lg-5">
+			<div class="row justify-content-center">
+				<span class="id-top" id="<?php the_field('id_palestrante'); ?>"></span>
+				<div class="col-12">
+					<h2 class="title-1"><strong><?php the_field('title_panelist'); ?></strong></h2>
+				</div>
+	
+				<div class="col-lg-11">
+					<div class="row gx-5 mt-4">
+						<?php foreach (get_field('add_panelist') as $key => $value) : ?>
+							<div class="col-md-6 col-lg-4 mb-4 text-center">
+								<img src="<?= $value['foto'] ?>" alt="<?= $value['nome'] ?>" class="w-100">
+								<p class="mb-0"><strong><?= $value['nome'] ?></strong></p>
+								<p class="mb-0"><strong><?= $value['emprensa'] ?></strong></p>
+								<p class="mb-0"><?= $value['descricao'] ?></p>
 							</div>
 						<?php endforeach; ?>
 					</div>
