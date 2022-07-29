@@ -83,6 +83,29 @@ get_header();
 		<?php } ?>
 	</section>
 
+	<?php if (get_field('title_list1') != "") { ?>
+		<section class="container my-4 my-lg-5 not-mb">
+			<span class="id-top" id="<?php the_field('id_lista'); ?>"></span>
+			<div class="row  align-items-center">
+				<div class="col-12 mb-3">
+					<h2 class="title-1"><strong><?php the_field('title_list1'); ?></strong></h2>
+				</div>
+
+				<div class="col-lg-9">
+					<?php the_field('description_list1'); ?>
+				</div>
+				<div class="col-lg-3 text-center text-lg-end">
+					<?php $currentlang = get_bloginfo('language');
+					if ($currentlang == "pt-BR") : ?>
+						<a href="<?php the_field('link_list1'); ?>" target="_blank" rel="noopener noreferrer" title="Clique aqui" class="btn btn-blue">CLIQUE AQUI</a>
+					<?php elseif ($currentlang == "en-US") : ?>
+						<a href="<?php the_field('link_list1'); ?>" target="_blank" rel="noopener noreferrer" title="CLICK HERE" class="btn btn-blue">CLICK HERE</a>
+					<?php endif; ?>
+				</div>
+			</div>
+		</section>
+	<?php } ?>
+
 	<?php if (get_field('title_progr') != "") { ?>
 		<section class="container-fluid navExpo">
 			<span class="id-top" id="<?php the_field('id_programacao'); ?>"></span>
@@ -146,7 +169,7 @@ get_header();
 				<div class="col-12">
 					<h2 class="title-1"><strong><?php the_field('title_panelist'); ?></strong></h2>
 				</div>
-	
+
 				<div class="col-lg-11">
 					<div class="row gx-5 mt-4">
 						<?php foreach (get_field('add_panelist') as $key => $value) : ?>
@@ -158,29 +181,6 @@ get_header();
 							</div>
 						<?php endforeach; ?>
 					</div>
-				</div>
-			</div>
-		</section>
-	<?php } ?>
-
-	<?php if (get_field('title_list1') != "") { ?>
-		<section class="container my-4 my-lg-5 not-mb">
-			<span class="id-top" id="<?php the_field('id_lista'); ?>"></span>
-			<div class="row  align-items-center">
-				<div class="col-12 mb-3">
-					<h2 class="title-1"><strong><?php the_field('title_list1'); ?></strong></h2>
-				</div>
-
-				<div class="col-lg-9">
-					<?php the_field('description_list1'); ?>
-				</div>
-				<div class="col-lg-3 text-center text-lg-end">
-					<?php $currentlang = get_bloginfo('language');
-					if ($currentlang == "pt-BR") : ?>
-						<a href="<?php the_field('link_list1'); ?>" target="_blank" rel="noopener noreferrer" title="Clique aqui" class="btn btn-blue">CLIQUE AQUI</a>
-					<?php elseif ($currentlang == "en-US") : ?>
-						<a href="<?php the_field('link_list1'); ?>" target="_blank" rel="noopener noreferrer" title="CLICK HERE" class="btn btn-blue">CLICK HERE</a>
-					<?php endif; ?>
 				</div>
 			</div>
 		</section>
