@@ -44,6 +44,44 @@ get_header();
 			</div>
 		</div>
 
+		<?php if (get_field('title_expositor') != "") { ?>
+			<section class="container my-4 my-lg-5 pt-0 pt-lg-4 not-mb">
+				<span class="id-top" id="<?php the_field('id_expositor'); ?>"></span>
+				<div class="row  align-items-center">
+					<div class="col-12 mb-3">
+						<h2 class="title-1"><strong><?php the_field('title_expositor'); ?></strong></h2>
+					</div>
+
+					<div class="col-lg-9">
+						<?php the_field('description_expositor'); ?>
+					</div>
+					<div class="col-lg-3 text-center text-lg-end">
+						<?php $currentlang = get_bloginfo('language');
+						if ($currentlang == "pt-BR") : ?>
+							<a href="<?php the_field('link_expositor'); ?>" target="_blank" rel="noopener noreferrer" title="Clique aqui" class="btn btn-blue">CLIQUE AQUI</a>
+						<?php elseif ($currentlang == "en-US") : ?>
+							<a href="<?php the_field('link_expositor'); ?>" target="_blank" rel="noopener noreferrer" title="CLICK HERE" class="btn btn-blue">CLICK HERE</a>
+						<?php endif; ?>
+					</div>
+				</div>
+			</section>
+		<?php } ?>
+
+		<?php if (get_field('title_estandes') != "") { ?>
+			<section class="container my-4 my-lg-5 pt-0 pt-lg-4">
+				<span class="id-top" id="<?php the_field('id_mapa'); ?>"></span>
+				<div class="row  align-items-center justify-content-center">
+					<div class="col-12 mb-3">
+						<h2 class="title-1"><strong><?php the_field('title_estandes'); ?></strong></h2>
+					</div>
+
+					<div class="col-lg-9 text-center">
+						<img src="<?php the_field('map_estande'); ?>" alt="Mapa" class="img-fluid">
+					</div>
+				</div>
+			</section>
+		<?php } ?>
+
 		<?php if (get_field('title_panelist') != "") { ?>
 			<section class="row justify-content-center mb-4 mb-lg-5">
 				<span class="id-top" id="<?php the_field('id_palestrante'); ?>"></span>
@@ -140,44 +178,6 @@ get_header();
 						<a href="<?php the_field('link_list1'); ?>" target="_blank" rel="noopener noreferrer" title="Clique aqui" class="btn btn-blue">CLIQUE AQUI</a>
 					<?php elseif ($currentlang == "en-US") : ?>
 						<a href="<?php the_field('link_list1'); ?>" target="_blank" rel="noopener noreferrer" title="CLICK HERE" class="btn btn-blue">CLICK HERE</a>
-					<?php endif; ?>
-				</div>
-			</div>
-		</section>
-	<?php } ?>
-
-	<?php if (get_field('title_estandes') != "") { ?>
-		<section class="container my-4 my-lg-5 pt-0 pt-lg-4">
-			<span class="id-top" id="<?php the_field('id_mapa'); ?>"></span>
-			<div class="row  align-items-center justify-content-center">
-				<div class="col-12 mb-3">
-					<h2 class="title-1"><strong><?php the_field('title_estandes'); ?></strong></h2>
-				</div>
-
-				<div class="col-lg-9 text-center">
-					<img src="<?php the_field('map_estande'); ?>" alt="Mapa" class="img-fluid">
-				</div>
-			</div>
-		</section>
-	<?php } ?>
-
-	<?php if (get_field('title_expositor') != "") { ?>
-		<section class="container my-4 my-lg-5 pt-0 pt-lg-4 not-mb">
-			<span class="id-top" id="<?php the_field('id_expositor'); ?>"></span>
-			<div class="row  align-items-center">
-				<div class="col-12 mb-3">
-					<h2 class="title-1"><strong><?php the_field('title_expositor'); ?></strong></h2>
-				</div>
-
-				<div class="col-lg-9">
-					<?php the_field('description_expositor'); ?>
-				</div>
-				<div class="col-lg-3 text-center text-lg-end">
-					<?php $currentlang = get_bloginfo('language');
-					if ($currentlang == "pt-BR") : ?>
-						<a href="<?php the_field('link_expositor'); ?>" target="_blank" rel="noopener noreferrer" title="Clique aqui" class="btn btn-blue">CLIQUE AQUI</a>
-					<?php elseif ($currentlang == "en-US") : ?>
-						<a href="<?php the_field('link_expositor'); ?>" target="_blank" rel="noopener noreferrer" title="CLICK HERE" class="btn btn-blue">CLICK HERE</a>
 					<?php endif; ?>
 				</div>
 			</div>
