@@ -206,7 +206,7 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
-// Noticias
+// Notícias
 add_action('init', 'create_post_noticias');
 function create_post_noticias()
 {
@@ -214,8 +214,8 @@ function create_post_noticias()
 		'noticias',
 		array(
 			'labels' => array(
-				'name' => __('Noticias'),
-				'singular_name' => __('Noticias')
+				'name' => __('Notícias'),
+				'singular_name' => __('Notícias')
 			),
 			'has_archive' => true,
 			'public' => true,
