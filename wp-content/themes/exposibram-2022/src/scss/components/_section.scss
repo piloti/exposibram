@@ -423,6 +423,23 @@ body {
 }
 
 // RESPONSIVO
+@media (max-width: 1440px) {
+  .site-header {
+    .menu-expo {
+      ul {
+        li {
+          margin: 0 20px;
+          &:first-of-type {
+            margin: 0 20px 0 0;
+          }
+          &:last-of-type {
+            margin: 0 0 0 20px;
+          }
+        }
+      }
+    }
+  }
+}
 @media (max-width: 1380px) {
   .section-text-imgright {
     .bg-1 {
@@ -441,12 +458,12 @@ body {
     .menu-expo {
       ul {
         li {
-          margin: 0 20px;
+          margin: 0 10px;
           &:first-of-type {
-            margin: 0 20px 0 0;
+            margin: 0 10px 0 0;
           }
           &:last-of-type {
-            margin: 0 0 0 20px;
+            margin: 0 0 0 10px;
           }
         }
       }
@@ -464,6 +481,27 @@ body {
     .foto {
       background-size: cover;
     }
+  }
+
+  .header-container {
+    max-width: 100% !important;
+  }
+}
+
+@media (max-width: 1080px) {
+  .site-header {
+    height: 50px;
+    padding: 0;
+
+    .container {
+      display: none !important;
+    }
+  }
+  .menu-mobile {
+    display: block;
+  }
+  body {
+    padding-top: 50px;
   }
 }
 
