@@ -11702,6 +11702,11 @@ body {
 .section-content .post-thumbnail {
   margin-bottom: 16px;
 }
+.section-content .post-thumbnail img {
+  max-width: 100%;
+  width: auto;
+  height: auto;
+}
 .section-content a {
   color: #000000;
 }

@@ -398,6 +398,12 @@ body {
 
   .post-thumbnail {
     margin-bottom: 16px;
+
+    img {
+      max-width: 100%;
+      width: auto;
+      height: auto;
+    }
   }
 
   a {
