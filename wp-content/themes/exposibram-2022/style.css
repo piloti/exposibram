@@ -11706,7 +11706,8 @@ body {
   color: #000000;
 }
 
-.entry-content p {
+.entry-content p,
+.entry-summary p {
   font-size: 16px;
 }
 

@@ -9,8 +9,10 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
+<article id="post-<?php the_ID(); ?>" <?php post_class('col-lg-4 mb-4 mb-lg-5'); ?>>
+	<?php exposibram_2022_post_thumbnail(); ?>
+
+	<header class="entry-header pt-1 pb-0">
 		<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
 
 		<?php if ( 'post' === get_post_type() ) : ?>
@@ -23,7 +25,6 @@
 		<?php endif; ?>
 	</header><!-- .entry-header -->
 
-	<?php exposibram_2022_post_thumbnail(); ?>
 
 	<div class="entry-summary">
 		<?php the_excerpt(); ?>
