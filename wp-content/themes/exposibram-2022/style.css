@@ -11103,6 +11103,11 @@ b {
   text-transform: uppercase;
   color: #004070;
 }
+.entry-header a {
+  color: #004070;
+  text-decoration: none;
+  font-size: 24px;
+}
 
 /**
  * Owl Carousel v2.3.4
@@ -11693,6 +11698,16 @@ body {
 .section-content {
   padding-top: 65px;
   padding-bottom: 45px;
+}
+.section-content .post-thumbnail {
+  margin-bottom: 16px;
+}
+.section-content a {
+  color: #000000;
+}
+
+.entry-content p {
+  font-size: 16px;
 }
 
 @media (max-width: 1380px) {
