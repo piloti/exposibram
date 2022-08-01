@@ -17,11 +17,11 @@ get_header();
   </div>
 
   <section class="container section-content">
-    <div class="row">
-      <div class="col-12 mb-3">
+    <div class="row justify-content-center">
+      <div class="col-lg-10 mb-3">
         <h1 class="title-1"><strong><?php the_title(); ?></strong></h1>
       </div>
-      <div class="col-12">
+      <div class="col-lg-10">
 
         <?php exposibram_2022_post_thumbnail(); ?>
 
