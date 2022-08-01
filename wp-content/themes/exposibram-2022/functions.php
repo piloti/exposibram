@@ -172,12 +172,12 @@ function exposibram_2022_scripts() {
 add_action( 'wp_enqueue_scripts', 'exposibram_2022_scripts' );
 
 /** CSS ADMIN */
-// add_action('admin_enqueue_scripts', 'css_admin');
+add_action('admin_enqueue_scripts', 'css_admin');
 
-// function css_admin()
-// {
-// 	wp_enqueue_style('admin-style', get_stylesheet_directory_uri() . '/style-admin.css');
-// }
+function css_admin()
+{
+	wp_enqueue_style('admin-style', get_stylesheet_directory_uri() . '/style-admin.css');
+}
 
 /**
  * Implement the Custom Header feature.
