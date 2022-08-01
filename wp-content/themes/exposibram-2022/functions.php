@@ -205,3 +205,25 @@ require get_template_directory() . '/inc/customizer.php';
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
+
+// Noticias
+add_action('init', 'create_post_noticias');
+function create_post_noticias()
+{
+	register_post_type(
+		'noticias',
+		array(
+			'labels' => array(
+				'name' => __('Noticias'),
+				'singular_name' => __('Noticias')
+			),
+			'has_archive' => true,
+			'public' => true,
+			// 'taxonomies' => array('post_tag', 'category'),
+			'rewrite' => array('slug' => 'noticias'),
+			'show_in_rest' => true,
+			'menu_icon'   => 'dashicons-admin-page',
+			'supports' => array('title', 'editor', 'author', 'thumbnail')
+		)
+	);
+}

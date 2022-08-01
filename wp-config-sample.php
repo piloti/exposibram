@@ -83,6 +83,7 @@ $table_prefix = 'wp_';
  * @link https://wordpress.org/support/article/debugging-in-wordpress/
  */
 define( 'WP_DEBUG', false );
+define( 'FS_METHOD','direct' );
 
 /* Adicione valores personalizados entre esta linha até "Isto é tudo". */
 
