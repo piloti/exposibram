@@ -75,8 +75,35 @@ get_header();
 						<h2 class="title-1"><strong><?php the_field('title_estandes'); ?></strong></h2>
 					</div>
 
-					<div class="col-lg-9 text-center">
-						<img src="<?php the_field('map_estande'); ?>" alt="Mapa" class="img-fluid">
+					<div class="col-lg-12 text-center">
+						<ul class="nav nav-tabs justify-content-center" id="myTab" role="tablist">
+							<li class="nav-item" role="presentation">
+								<button class="nav-link active" id="areaexterna-tab" data-bs-toggle="tab" data-bs-target="#areaexterna-tab-pane" type="button" role="tab" aria-controls="areaexterna-tab-pane" aria-selected="true">Área Externa</button>
+							</li>
+							<li class="nav-item" role="presentation">
+								<button class="nav-link" id="secretaria-tab" data-bs-toggle="tab" data-bs-target="#secretaria-tab-pane" type="button" role="tab" aria-controls="secretaria-tab-pane" aria-selected="false">Nível Secretaria</button>
+							</li>
+							<li class="nav-item" role="presentation">
+								<button class="nav-link" id="foyer-tab" data-bs-toggle="tab" data-bs-target="#foyer-tab-pane" type="button" role="tab" aria-controls="foyer-tab-pane" aria-selected="false">Nível Foyer</button>
+							</li>
+							<li class="nav-item" role="presentation">
+								<button class="nav-link" id="pavilhao-tab" data-bs-toggle="tab" data-bs-target="#pavilhao-tab-pane" type="button" role="tab" aria-controls="pavilhao-tab-pane" aria-selected="false">Nível Pavilhao</button>
+							</li>
+						</ul>
+						<div class="tab-content mt-1" id="myTabContent">
+							<div class="tab-pane fade show active" id="areaexterna-tab-pane" role="tabpanel" aria-labelledby="areaexterna-tab" tabindex="0">
+								<img src="<?php the_field('map_externa'); ?>" alt="Mapa" class="img-fluid">
+							</div>
+							<div class="tab-pane fade" id="secretaria-tab-pane" role="tabpanel" aria-labelledby="secretaria-tab" tabindex="0">
+								<img src="<?php the_field('map_secretaria'); ?>" alt="Mapa" class="img-fluid">
+							</div>
+							<div class="tab-pane fade" id="foyer-tab-pane" role="tabpanel" aria-labelledby="foyer-tab" tabindex="0">
+								<img src="<?php the_field('map_foyer'); ?>" alt="Mapa" class="img-fluid">
+							</div>
+							<div class="tab-pane fade" id="pavilhao-tab-pane" role="tabpanel" aria-labelledby="pavilhao-tab" tabindex="0">
+								<img src="<?php the_field('map_pavihao'); ?>" alt="Mapa" class="img-fluid">
+							</div>
+						</div>
 					</div>
 				</div>
 			</section>
