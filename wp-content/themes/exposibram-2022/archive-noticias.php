@@ -16,7 +16,7 @@ get_header();
     <img width="1920" height="210" src="/wp-content/uploads/2022/07/banner-full-2.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" loading="lazy" srcset="/wp-content/uploads/2022/07/banner-full-2.jpg 1920w, /wp-content/uploads/2022/07/banner-full-2-300x33.jpg 300w, /wp-content/uploads/2022/07/banner-full-2-1024x112.jpg 1024w, /wp-content/uploads/2022/07/banner-full-2-768x84.jpg 768w, /wp-content/uploads/2022/07/banner-full-2-1536x168.jpg 1536w" sizes="(max-width: 1920px) 100vw, 1920px">
   </div>
   <section class="container section-content">
-    <div class="row">
+    <div class="row gx-5">
       <div class="col-12 mb-4 mb-lg-5">
         <?php if (have_posts()) : ?>
 
