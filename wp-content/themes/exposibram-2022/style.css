@@ -11683,6 +11683,9 @@ body {
   margin: 45px auto 0;
   display: block;
 }
+.iframe-e .iw-100 {
+  max-width: 100% !important;
+}
 
 .id-top {
   position: relative;
