@@ -11008,6 +11008,20 @@ b {
 .site-header .menu-expo ul li.btn-insceva a:hover {
   background-color: #F07D00;
 }
+.site-header .menu-expo ul li.btn-insceva a::before {
+  display: none;
+}
+.site-header .menu-expo ul li.btn-insceva .sub-menu {
+  top: 34px;
+}
+.site-header .menu-expo ul li.btn-insceva .sub-menu li a {
+  padding: 0;
+  background-color: transparent;
+  color: black;
+}
+.site-header .menu-expo ul li.btn-insceva .sub-menu li a:hover {
+  color: #004070;
+}
 .site-header .menu-expo ul li.menu-item-has-children a::before {
   content: "";
   width: 8px;
