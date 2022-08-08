@@ -12,7 +12,7 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class('col-lg-4 mb-4 mb-lg-5'); ?>>
 
-  <?php exposibram_2022_post_thumbnail(); ?>
+  <div class="figure-noticias" style="background-image: url('<?php the_post_thumbnail_url(); ?>');"></div>
 
   <header class="entry-header pt-1 pb-0">
     <?php
