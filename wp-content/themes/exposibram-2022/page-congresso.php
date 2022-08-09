@@ -171,7 +171,7 @@ get_header();
 										<li class="nav-item col" role="presentation">
 											<button class="nav-link <?php if ($key == 0) {
 																								echo ' active ';
-																							} ?>" id="dia-<?= $value['dia'] ?>-tab" data-bs-toggle="tab" data-bs-target="#dia-<?= $value['dia'] ?>" type="button" role="tab" aria-controls="dia-<?= $value['dia'] ?>" aria-selected="true">DIA <?= $value['dia'] ?></button>
+																							} ?>" id="dia-gm-<?= $value['dia'] ?>-tab" data-bs-toggle="tab" data-bs-target="#dia-gm-<?= $value['dia'] ?>" type="button" role="tab" aria-controls="dia-gm-<?= $value['dia'] ?>" aria-selected="true">DIA <?= $value['dia'] ?></button>
 										</li>
 									<?php endforeach; ?>
 								</ul>
@@ -182,7 +182,7 @@ get_header();
 						<?php foreach (get_field('add_grade') as $key => $value) : ?>
 							<div class="tab-pane fade show <?php if ($key == 0) {
 																								echo ' active ';
-																							} ?>" id="dia-<?= $value['dia'] ?>" role="tabpanel" aria-labelledby="dia-<?= $value['dia'] ?>-tab" tabindex="0">
+																							} ?>" id="dia-gm-<?= $value['dia'] ?>" role="tabpanel" aria-labelledby="dia-gm-<?= $value['dia'] ?>-tab" tabindex="0">
 								<?php foreach ($value['add_auditorio'] as $key2 => $value2) : ?>
 									<div class="mb-4 mb-lg-5">
 										<div class="tab-bg">
