@@ -114,14 +114,14 @@ if (function_exists('acf_add_options_page')) {
 		'redirect'		=> false
 	));
 
-	// acf_add_options_page(array(
-	// 	'page_title' 	=> 'Footer',
-	// 	'menu_title'	=> 'Footer',
-	// 	'menu_slug' 	=> 'theme-footer',
-	// 	'capability'	=> 'edit_posts',
-	// 	'position'      => '2',
-	// 	'redirect'		=> false
-	// ));
+	acf_add_options_page(array(
+		'page_title' 	=> 'Footer',
+		'menu_title'	=> 'Footer',
+		'menu_slug' 	=> 'theme-footer',
+		'capability'	=> 'edit_posts',
+		'position'      => '2',
+		'redirect'		=> false
+	));
 }
 
 /**

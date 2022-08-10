@@ -27,13 +27,11 @@
 				<?php $currentlang = get_bloginfo('language');
 				if ($currentlang == "pt-BR") : ?>
 					<p>
-						Para mais informações, entre em contato conosco:<br>
-						+55 (31) 2626-0637 | <a href="mailto:secretaria@ibram.org.br">secretaria@ibram.org.br</a>
+						<?php the_field('descricao_footerpt', 'options'); ?>
 					</p>
 				<?php elseif ($currentlang == "en-US") : ?>
 					<p>
-						For more information, contact us:<br>
-						+55 (31) 2626-0637 | <a href="mailto:secretaria@ibram.org.br">secretaria@ibram.org.br</a>
+						<?php the_field('descricao_footeren', 'options'); ?>
 					</p>
 				<?php endif; ?>
 			</div>
