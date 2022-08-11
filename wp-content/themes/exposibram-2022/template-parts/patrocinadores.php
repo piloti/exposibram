@@ -77,6 +77,22 @@
           <div class="col-12">
             <?php $currentlang = get_bloginfo('language');
             if ($currentlang == "pt-BR") : ?>
+              <h4><strong>Gestão de Resíduos</strong></h4>
+            <?php elseif ($currentlang == "en-US") : ?>
+              <h4><strong>Waste Management</strong></h4>
+            <?php endif; ?>
+            <div class="align-items-center">
+              <?php foreach (get_field('add_gresiduos', 'options') as $key => $value) : ?>
+                <a href="<?= $value['link'] ?>" target="_blank" rel="noopener noreferrer" title="Gestão de Resíduos" class="d-inline-block"><img src="<?= $value['logo'] ?>" alt="Gestão de Resíduos"></a>
+              <?php endforeach; ?>
+            </div>
+          </div>
+        </div>
+
+        <div class="row mb-4 mb-lg-5">
+          <div class="col-12">
+            <?php $currentlang = get_bloginfo('language');
+            if ($currentlang == "pt-BR") : ?>
               <h4><strong>Bronze</strong></h4>
             <?php elseif ($currentlang == "en-US") : ?>
               <h4><strong>Bronze</strong></h4>
