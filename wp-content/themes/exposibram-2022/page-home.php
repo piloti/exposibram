@@ -23,7 +23,9 @@ get_header();
       <div class="owl-carousel owl-carousel-e">
         <?php foreach (get_field('add_destaque') as $key => $value) : ?>
           <div class="item">
-            <img src="<?= $value['img_destaque'] ?>" alt="Banner" class="w-100">
+            <a href="<?= $value['link'] ?>" target="<?= $value['aba'] ?>" rel="noopener noreferrer">
+              <img src="<?= $value['img_destaque'] ?>" alt="Banner" class="w-100">
+            </a>
           </div>
         <?php endforeach; ?>
       </div>
@@ -113,7 +115,7 @@ get_header();
     nav: true,
     dots: false,
     items: 1,
-    // autoplay: true,
+    autoplay: true,
     autoplayTimeout: 10000,
     autoHeight: true,
   })
