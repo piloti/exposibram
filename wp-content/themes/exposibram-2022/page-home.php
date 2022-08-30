@@ -116,7 +116,7 @@ get_header();
     dots: false,
     items: 1,
     autoplay: true,
-    autoplayTimeout: 10000,
+    autoplayTimeout: 5000,
     autoHeight: true,
   })
 </script>
