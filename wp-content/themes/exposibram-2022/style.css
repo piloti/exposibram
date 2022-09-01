@@ -11064,6 +11064,10 @@ b {
 .site-header .menu-menu-header-en-container {
   display: inline-block;
 }
+.site-header .container {
+  max-width: 1460px;
+  width: 100%;
+}
 
 .lang {
   display: inline-block;
