@@ -11717,6 +11717,9 @@ body {
   font-weight: 700;
 }
 
+.post-expo .post-thumbnail {
+  text-align: center;
+}
 .post-expo .post-thumbnail img {
   width: 100%;
   height: auto;
@@ -11831,6 +11834,7 @@ body {
 }
 .section-content .post-thumbnail {
   margin-bottom: 16px;
+  text-align: center;
 }
 .section-content .post-thumbnail img {
   max-width: 100%;
