@@ -11703,6 +11703,7 @@ body {
   background-color: #004070;
 }
 .wp-block-button__link:hover {
+  color: #fff;
   background-color: #F07D00;
 }
 
