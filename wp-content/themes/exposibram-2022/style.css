@@ -11694,14 +11694,15 @@ body {
   padding-right: 12px;
   margin: 0 auto;
 }
-.post-expo .wp-block-button__link {
+
+.wp-block-button__link {
   font-size: 24px;
   font-weight: 600;
   line-height: 1.3;
   border-radius: 16px;
   background-color: #004070;
 }
-.post-expo .wp-block-button__link:hover {
+.wp-block-button__link:hover {
   background-color: #F07D00;
 }
 
