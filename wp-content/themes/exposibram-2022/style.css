@@ -11662,6 +11662,8 @@ body {
   border-radius: 16px;
   padding: 25px 20px;
   color: #004070;
+  display: flex;
+  align-items: center;
 }
 .card-white p {
   font-size: 18px;

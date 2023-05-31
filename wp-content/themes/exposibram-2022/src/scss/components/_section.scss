@@ -270,6 +270,8 @@ body {
   border-radius: 16px;
   padding: 25px 20px;
   color: $blue-e;
+  display: flex;
+  align-items: center;
 
   p {
     font-size: 18px;
