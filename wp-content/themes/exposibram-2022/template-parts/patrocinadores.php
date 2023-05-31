@@ -131,7 +131,7 @@
                 <?php endif; ?>
                 <div class="align-items-center">
                   <?php foreach (get_field('add_apoio1', 'options') as $key => $value) : ?>
-                    <a href="<?= $value['link'] ?>" target="_blank" rel="noopener noreferrer" title="apoio" class="d-inline-block"><img src="<?= $value['logo'] ?>" alt="apoio"></a>
+                    <a href="<?= $value['link'] ?>" target="_blank" rel="noopener noreferrer" title="apoio" class="d-inline-block logo-small <?= $value['logo_sm'] ?>"><img src="<?= $value['logo'] ?>" alt="apoio"></a>
                   <?php endforeach; ?>
                 </div>
               </div>
@@ -147,7 +147,7 @@
                 <?php endif; ?>
                 <div class="align-items-center">
                   <?php foreach (get_field('add_apoio2', 'options') as $key => $value) : ?>
-                    <a href="<?= $value['link'] ?>" target="_blank" rel="noopener noreferrer" title="apoio" class="d-inline-block"><img src="<?= $value['logo'] ?>" alt="apoio"></a>
+                    <a href="<?= $value['link'] ?>" target="_blank" rel="noopener noreferrer" title="apoio" class="d-inline-block logo-small <?= $value['logo_sm'] ?>"><img src="<?= $value['logo'] ?>" alt="apoio"></a>
                   <?php endforeach; ?>
                 </div>
               </div>
