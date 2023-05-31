@@ -230,6 +230,14 @@ body {
     }
   }
 
+  a {
+    color: #fff;
+
+    &:hover {
+      color: $orange-e;
+    }
+  }
+
   &.map {
     iframe {
       width: 100%;

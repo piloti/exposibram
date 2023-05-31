@@ -11634,6 +11634,12 @@ body {
 .section-blue-1 h3 strong, .section-blue-1 .h3 strong {
   font-weight: 700;
 }
+.section-blue-1 a {
+  color: #fff;
+}
+.section-blue-1 a:hover {
+  color: #F07D00;
+}
 .section-blue-1.map iframe {
   width: 100%;
   height: 555px;
