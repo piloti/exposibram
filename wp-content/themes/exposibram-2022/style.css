@@ -11648,10 +11648,10 @@ body {
   margin-right: 45px;
   margin-bottom: 30px;
 }
-.section-sponsors a.logo-small {
+.section-sponsors a.logo-small img {
   max-width: 155px;
 }
-.section-sponsors a.logo-small.lg-small {
+.section-sponsors a.logo-small.lg-small img {
   max-width: 100px;
 }
 
