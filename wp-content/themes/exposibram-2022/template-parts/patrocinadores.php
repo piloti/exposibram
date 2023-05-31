@@ -106,7 +106,7 @@
             <?php endif; ?>
             <div class="align-items-center">
               <?php foreach (get_field('add_bronze', 'options') as $key => $value) : ?>
-                <a href="<?= $value['link'] ?>" target="_blank" rel="noopener noreferrer" title="bronze" class="d-inline-block"><img src="<?= $value['logo'] ?>" alt="bronze"></a>
+                <a href="<?= $value['link'] ?>" target="_blank" rel="noopener noreferrer" title="bronze" class="d-inline-block logo-small"><img src="<?= $value['logo'] ?>" alt="bronze"></a>
               <?php endforeach; ?>
             </div>
           </div>

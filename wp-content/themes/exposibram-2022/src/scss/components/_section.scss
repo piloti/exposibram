@@ -248,6 +248,14 @@ body {
       margin-right: 45px;
       margin-bottom: 30px;
     }
+
+    &.logo-small {
+      max-width: 155px;
+
+      &.lg-small {
+        max-width: 100px;
+      }
+    }
   }
 }
 
