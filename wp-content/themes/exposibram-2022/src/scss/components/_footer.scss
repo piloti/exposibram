@@ -1,6 +1,6 @@
 .site-footer {
   position: relative;
-  background-color: $green-e;
+  background-color: $blue-e;
   color: white;
   padding: 65px 0 90px 0;
 
@@ -16,7 +16,7 @@
     text-decoration: none;
 
     &:hover {
-      color: $orange-e;
+      color: $green-e;
       // text-decoration: underline;
     }
   }
@@ -55,7 +55,7 @@
         text-decoration: none;
 
         &:hover {
-          color: $orange-e;
+          color: $green-e;
         }
       }
 
