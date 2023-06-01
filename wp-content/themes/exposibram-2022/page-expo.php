@@ -78,17 +78,17 @@ get_header();
 					<div class="col-lg-12 text-center">
 						<ul class="nav nav-tabs justify-content-center" id="myTab" role="tablist">
 							<li class="nav-item" role="presentation">
-								<button class="nav-link active" id="areaexterna-tab" data-bs-toggle="tab" data-bs-target="#areaexterna-tab-pane" type="button" role="tab" aria-controls="areaexterna-tab-pane" aria-selected="true">Área Externa</button>
+								<button class="nav-link active" id="areaexterna-tab" data-bs-toggle="tab" data-bs-target="#areaexterna-tab-pane" type="button" role="tab" aria-controls="areaexterna-tab-pane" aria-selected="true">Mapa Área Externa</button>
 							</li>
 							<li class="nav-item" role="presentation">
-								<button class="nav-link" id="secretaria-tab" data-bs-toggle="tab" data-bs-target="#secretaria-tab-pane" type="button" role="tab" aria-controls="secretaria-tab-pane" aria-selected="false">Nível Secretaria</button>
+								<button class="nav-link" id="secretaria-tab" data-bs-toggle="tab" data-bs-target="#secretaria-tab-pane" type="button" role="tab" aria-controls="secretaria-tab-pane" aria-selected="false">Mapa Área Interna</button>
 							</li>
-							<li class="nav-item" role="presentation">
+							<!-- <li class="nav-item" role="presentation">
 								<button class="nav-link" id="foyer-tab" data-bs-toggle="tab" data-bs-target="#foyer-tab-pane" type="button" role="tab" aria-controls="foyer-tab-pane" aria-selected="false">Nível Foyer</button>
 							</li>
 							<li class="nav-item" role="presentation">
 								<button class="nav-link" id="pavilhao-tab" data-bs-toggle="tab" data-bs-target="#pavilhao-tab-pane" type="button" role="tab" aria-controls="pavilhao-tab-pane" aria-selected="false">Nível Pavilhao</button>
-							</li>
+							</li> -->
 						</ul>
 						<div class="tab-content mt-1" id="myTabContent">
 							<div class="tab-pane fade show active" id="areaexterna-tab-pane" role="tabpanel" aria-labelledby="areaexterna-tab" tabindex="0">
