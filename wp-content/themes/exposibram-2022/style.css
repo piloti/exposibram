@@ -11953,8 +11953,16 @@ body {
   .section-sponsors a img {
     width: 100%;
   }
+  .entry-header {
+    padding-top: 35px;
+  }
   .entry-header h1, .entry-header .h1 {
     font-size: 32px;
+  }
+  .post-thumbnail .attachment-post-thumbnail {
+    height: 80px;
+    object-fit: cover;
+    object-position: 22%;
   }
 }
 @media (max-width: 768px) {

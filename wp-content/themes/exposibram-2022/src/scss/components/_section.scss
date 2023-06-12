@@ -623,8 +623,16 @@ body {
     }
   }
   .entry-header {
+    padding-top: 35px;
     h1 {
       font-size: 32px;
+    }
+  }
+  .post-thumbnail {
+    .attachment-post-thumbnail {
+      height: 80px;
+      object-fit: cover;
+      object-position: 22%;
     }
   }
 }
