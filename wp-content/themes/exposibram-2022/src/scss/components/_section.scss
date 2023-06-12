@@ -622,10 +622,17 @@ body {
       }
     }
   }
+  .entry-header {
+    h1 {
+      font-size: 32px;
+    }
+  }
 }
 
 @media (max-width: 768px) {
-  .title-1 {
-    font-size: 28px;
+  .entry-header {
+    h1 {
+      font-size: 28px;
+    }
   }
 }
