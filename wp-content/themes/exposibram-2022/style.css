@@ -11950,6 +11950,14 @@ body {
   .site-footer .col-12 {
     text-align: center;
   }
+  .section-sponsors a img {
+    width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .title-1 {
+    font-size: 28px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
