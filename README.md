@@ -20,7 +20,7 @@
 - Bootstrap 5.2.0
 - Sass
 
-Instalar e rodar os comandos CLI na pasta `wp-content/themes/exposibram`
+Instalar e rodar os comandos CLI na pasta `wp-content/themes/exposibram-2022`
 ```sh
 $ sudo npm install -g sass
 $ npm i bootstrap@5.2.0

@@ -475,6 +475,12 @@ body {
       }
     }
   }
+
+  .card-white {
+    p {
+      font-size: 15px;
+    }
+  }
 }
 @media (max-width: 1380px) {
   .section-text-imgright {
@@ -541,6 +547,11 @@ body {
   }
   body {
     padding-top: 50px;
+  }
+  .card-white {
+    p {
+      font-size: 14px;
+    }
   }
 }
 

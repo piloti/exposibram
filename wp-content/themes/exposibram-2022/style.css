@@ -11834,6 +11834,9 @@ body {
   .site-header .menu-expo ul li:last-of-type {
     margin: 0 0 0 20px;
   }
+  .card-white p {
+    font-size: 15px;
+  }
 }
 @media (max-width: 1380px) {
   .section-text-imgright .bg-1::before {
@@ -11882,6 +11885,9 @@ body {
   }
   body {
     padding-top: 50px;
+  }
+  .card-white p {
+    font-size: 14px;
   }
 }
 @media (max-width: 991px) {
