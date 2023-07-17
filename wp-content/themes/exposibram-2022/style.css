@@ -11486,6 +11486,22 @@ body {
   background-color: #35b201;
 }
 
+.btn-whatsapp {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  z-index: 15;
+}
+.btn-whatsapp:hover svg path {
+  fill: #004070;
+}
+.btn-whatsapp svg {
+  font-size: 50px;
+}
+.btn-whatsapp svg path {
+  fill: #119835;
+}
+
 .banner-home {
   position: relative;
 }
