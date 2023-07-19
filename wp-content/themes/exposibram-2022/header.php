@@ -61,7 +61,7 @@
 		<a class="skip-link screen-reader-text d-none" href="#primary"><?php esc_html_e('Skip to content', 'exposibram-2022'); ?></a>
 
 		<header id="masthead" class="site-header">
-			<div class="container header-container">
+			<div class="container-fluid header-container">
 				<div class="row">
 					<div class="col-12">
 						<nav class="main-navigation menu-expo">

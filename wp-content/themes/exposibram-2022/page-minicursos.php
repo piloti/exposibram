@@ -24,7 +24,8 @@ get_header();
                     <?php if (!empty($value['link'])) : ?>
                         <a href="<?= $value['link'] ?>" target="<?= $value['aba'] ?>" rel="noopener noreferrer">
                         <?php endif; ?>
-                        <img src="<?= $value['image'] ?>" alt="Banner" class="w-100">
+                        <img src="<?= $value['image'] ?>" alt="Banner" class="w-100 d-md-block d-none">
+                        <img src="<?= $value['image_mobile'] ?>" alt="Banner" class="w-100 d-md-none d-block">
                         <?php if (!empty($value['link'])) : ?>
                         </a>
                     <?php endif; ?>

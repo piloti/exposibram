@@ -493,8 +493,22 @@ body {
 
 // RESPONSIVO
 @media (max-width: 1440px) {
+    body {
+        padding-top: 55px;
+    }
+
+    .admin-bar {
+        .menu-mobile {
+            top: 33px;
+        }
+    }
+
     .site-header {
+        height: 55px;
+
         .menu-expo {
+            display: none;
+
             ul {
                 li {
                     margin: 0 20px;
@@ -515,6 +529,10 @@ body {
         p {
             font-size: 15px;
         }
+    }
+
+    .menu-mobile {
+        display: inline-block;
     }
 }
 
