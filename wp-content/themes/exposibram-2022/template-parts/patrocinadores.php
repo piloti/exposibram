@@ -173,9 +173,9 @@
                             <div class="col-12">
                                 <?php $currentlang = get_bloginfo('language');
                                 if ($currentlang == "pt-BR") : ?>
-                                    <h4><strong>Eventos Parceiros</strong></h4>
+                                    <h4 class="mb-3"><strong>Eventos Parceiros</strong></h4>
                                 <?php elseif ($currentlang == "en-US") : ?>
-                                    <h4><strong>Partner Events</strong></h4>
+                                    <h4 class="mb-3"><strong>Partner Events</strong></h4>
                                 <?php endif; ?>
                                 <div class="align-items-center">
                                     <?php foreach (get_field('add_parceiros', 'options') as $key => $value) : ?>
