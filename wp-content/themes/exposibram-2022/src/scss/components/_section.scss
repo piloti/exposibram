@@ -492,6 +492,26 @@ body {
 
 
 // RESPONSIVO
+@media (max-width: 1570px) {
+    .site-header {
+        .menu-expo {
+            ul {
+                li {
+                    margin: 0 15px;
+
+                    &:first-of-type {
+                        margin: 0 15px 0 0;
+                    }
+
+                    &:last-of-type {
+                        margin: 0 0 0 15px;
+                    }
+                }
+            }
+        }
+    }
+}
+
 @media (max-width: 1440px) {
     body {
         padding-top: 55px;
@@ -503,36 +523,10 @@ body {
         }
     }
 
-    .site-header {
-        height: 55px;
-
-        .menu-expo {
-            display: none;
-
-            ul {
-                li {
-                    margin: 0 20px;
-
-                    &:first-of-type {
-                        margin: 0 20px 0 0;
-                    }
-
-                    &:last-of-type {
-                        margin: 0 0 0 20px;
-                    }
-                }
-            }
-        }
-    }
-
     .card-white {
         p {
             font-size: 15px;
         }
-    }
-
-    .menu-mobile {
-        display: inline-block;
     }
 }
 
@@ -544,6 +538,45 @@ body {
                 top: 100px;
                 left: -380px;
                 transform: rotate(55deg);
+            }
+        }
+    }
+}
+
+@media (max-width: 1320px) {
+    .site-header {
+        height: 55px;
+        .menu-expo {
+            ul {
+                li {
+                    margin: 0 10px;
+
+                    &:first-of-type {
+                        margin: 0 15px 0 0;
+                    }
+
+                    &:last-of-type {
+                        margin: 0 0 0 15px;
+                    }
+
+                    &.btn-insceva {
+                        a {
+                            padding: 10px 20px;
+                        }
+
+                        .sub-menu {
+                            top: 17px;
+                        }
+                    }
+
+                    a {
+                        font-size: 14px;
+                    }
+
+                    .sub-menu {
+                        padding-top: 18px;
+                    }
+                }
             }
         }
     }
@@ -589,6 +622,18 @@ body {
 
     .figure-noticias {
         height: 280px;
+    }
+}
+
+@media (max-width: 1140px) {
+    .site-header {
+        .menu-expo  {
+            display: none;
+        }
+    }
+
+    .menu-mobile {
+        display: inline-block;
     }
 }
 
