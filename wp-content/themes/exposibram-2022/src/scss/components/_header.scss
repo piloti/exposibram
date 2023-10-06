@@ -64,7 +64,7 @@
             background-color: $blue-e;
 
             &:hover {
-              background-color: $orange-e;
+              background-color: $green-e;
             }
 
             &::before {
@@ -196,8 +196,8 @@
 
         &:hover {
           color: white !important;
-          border-color: $orange-e !important;
-          background-color: $orange-e !important;
+          border-color: $green-e !important;
+          background-color: $green-e !important;
         }
       }
     }
