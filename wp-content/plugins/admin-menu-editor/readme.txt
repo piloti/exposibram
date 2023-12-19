@@ -3,8 +3,8 @@ Contributors: whiteshadow
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=A6P9S6CE3SRSW
 Tags: admin, dashboard, menu, security, wpmu
 Requires at least: 4.7
-Tested up to: 6.2
-Stable tag: 1.11
+Tested up to: 6.3.2
+Stable tag: 1.12
 
 Lets you edit the WordPress admin menu. You can re-order, hide or rename menus, add custom menus and more. 
 
@@ -74,6 +74,27 @@ Plugins installed in the `mu-plugins` directory are treated as "always on", so y
 3. Re-ordering menu items via drag and drop
 
 == Changelog ==
+
+= 1.12 =
+* Added a search box for menu icons.
+* Added more Dashicons. Now the icon dropdown should include all currently existing Dashicons.
+* Fixed a visual bug where the icon would become unreasonably narrow when no icon was selected.
+* Tested with WP 6.3.2 and 6.4-beta4.
+
+= 1.11.2 =
+* Fixed a conflict that prevented users from changing the menu icon of the Wordfence plugin (and possibly some other plugins that use similar CSS).
+* Fixed a crash if the plugin encounters a supposed "menu item" that has the wrong data type, like a boolean. This was likely caused by a bug in an unidentified plugin or theme that modified the menu list incorrectly.
+* Fixed plugin visibility restrictions not being applied when editing plugin files via AJAX.
+* Tested with WP 6.3.1 and WP 6.4-alpha.
+
+= 1.11.1 =
+* Fixed a minor plugin conflict with "WPFunnels" and "Email Marketing Automation - Mail Mint" that caused hidden menu items created by those plugins to become visible when AME was activated.
+* Fixed a conflict with the "Fortress" plugin that could reportedly cause an infinite loop.
+* Fixed a conflict with "Da Reactions" 4.0.3 that triggered PHP warnings like "Warning: Array to string conversion in .../includes/menu-item.php on line 54".
+* Fixed a potential fatal error when removing the number that represents pending updates/comments/etc from a menu title.
+* Fixed a minor conflict with Essential Grid 3.0.17 that caused tooltips in AME dialogs to appear underneath the dialogs.
+* Fixed a few jQuery deprecation warnings in the knockout-sortable library.
+* Switched TypeScript to strict mode.
 
 = 1.11 =
 * Fixed a minor conflict with the WPForms plugin where the hidden menu item "Dashboard -> Welcome to WPForms" became visible when Admin Menu Editor was installed.
