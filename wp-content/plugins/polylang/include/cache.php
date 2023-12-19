@@ -22,7 +22,7 @@ class PLL_Cache {
 	 *
 	 * @var array
 	 */
-	protected $cache = array();
+	protected $cache;
 
 	/**
 	 * Constructor

@@ -82,7 +82,7 @@ if ( ! class_exists( 'ACF_Location_Post_Template' ) ) :
 		public function get_values( $rule ) {
 			return array_merge(
 				array(
-					'default' => apply_filters( 'default_page_template_title', __( 'Default Template', 'acf' ), 'meta-box' ),
+					'default' => apply_filters( 'default_page_template_title', __( 'Default Template', 'acf' ) ),
 				),
 				acf_get_post_templates()
 			);

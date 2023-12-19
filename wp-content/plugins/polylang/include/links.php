@@ -29,13 +29,6 @@ class PLL_Links {
 	public $links_model;
 
 	/**
-	 * Current language (used to filter the content).
-	 *
-	 * @var PLL_Language|null
-	 */
-	public $curlang;
-
-	/**
 	 * Constructor
 	 *
 	 * @since 1.2
@@ -58,14 +51,7 @@ class PLL_Links {
 	 * @return string
 	 */
 	public function get_home_url( $language, $is_search = false ) {
-		if ( ! $language instanceof PLL_Language ) {
-			$language = $this->model->get_language( $language );
-		}
-
-		if ( empty( $language ) ) {
-			return home_url( '/' );
-		}
-
-		return $is_search ? $language->get_search_url() : $language->get_home_url();
+		$language = is_object( $language ) ? $language : $this->model->get_language( $language );
+		return $is_search ? $language->search_url : $language->home_url;
 	}
 }

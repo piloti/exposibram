@@ -10,54 +10,54 @@
  */
 class PLL_Admin extends PLL_Admin_Base {
 	/**
-	 * @var PLL_Admin_Filters|null
+	 * @var PLL_Admin_Filters
 	 */
 	public $filters;
 
 	/**
-	 * @var PLL_Admin_Filters_Columns|null
+	 * @var PLL_Admin_Filters_Columns
 	 */
 	public $filters_columns;
 
 	/**
-	 * @var PLL_Admin_Filters_Post|null
+	 * @var PLL_Admin_Filters_Post
 	 */
 	public $filters_post;
 
 	/**
-	 * @var PLL_Admin_Filters_Term|null
+	 * @var PLL_Admin_Filters_Term
 	 */
 	public $filters_term;
 
 	/**
-	 * @var PLL_Admin_Filters_Media|null
+	 * @var PLL_Admin_Filters_Media
 	 */
 	public $filters_media;
 
 	/**
 	 * @since 2.9
 	 *
-	 * @var PLL_Filters_Sanitization|null
+	 * @var PLL_Filters_Sanitization
 	 */
 	public $filters_sanitization;
 
 	/**
-	 * @var PLL_Admin_Block_Editor|null
+	 * @var PLL_Admin_Block_Editor
 	 */
 	public $block_editor;
 
 	/**
-	 * @var PLL_Admin_Classic_Editor|null
+	 * @var PLL_Admin_Classic_Editor
 	 */
 	public $classic_editor;
 
 	/**
-	 * @var PLL_Admin_Nav_Menu|null
+	 * @var PLL_Admin_Nav_Menu
 	 */
 	public $nav_menu;
 
 	/**
-	 * @var PLL_Admin_Filters_Widgets_Options|null
+	 * @var PLL_Admin_Filters_Widgets_Options
 	 */
 	public $filters_widgets_options;
 
@@ -87,7 +87,7 @@ class PLL_Admin extends PLL_Admin_Base {
 
 		// Setup filters for admin pages
 		// Priority 5 to make sure filters are there before customize_register is fired
-		if ( $this->model->has_languages() ) {
+		if ( $this->model->get_languages_list() ) {
 			add_action( 'wp_loaded', array( $this, 'add_filters' ), 5 );
 		}
 	}

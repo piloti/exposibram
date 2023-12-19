@@ -12,7 +12,7 @@ class PLL_Admin_Filters_Post extends PLL_Admin_Filters_Post_Base {
 	/**
 	 * Current language (used to filter the content).
 	 *
-	 * @var PLL_Language|null
+	 * @var PLL_Language
 	 */
 	public $curlang;
 
@@ -69,7 +69,7 @@ class PLL_Admin_Filters_Post extends PLL_Admin_Filters_Post_Base {
 			}
 
 			if ( ! empty( $hierarchical_taxonomies ) ) {
-				$terms          = get_terms( array( 'taxonomy' => $hierarchical_taxonomies, 'get' => 'all' ) );
+				$terms          = get_terms( $hierarchical_taxonomies, array( 'get' => 'all' ) );
 				$term_languages = array();
 
 				if ( is_array( $terms ) ) {
@@ -144,23 +144,13 @@ class PLL_Admin_Filters_Post extends PLL_Admin_Filters_Post_Base {
 				return;
 			}
 
-			if ( ! current_user_can( $post_type_object->cap->edit_post, $post_id ) ) {
-				return;
+			if ( current_user_can( $post_type_object->cap->edit_post, $post_id ) ) {
+				$this->model->post->set_language( $post_id, $this->model->get_language( sanitize_key( $_POST['post_lang_choice'] ) ) );
+
+				if ( isset( $_POST['post_tr_lang'] ) ) {
+					$this->save_translations( $post_id, array_map( 'absint', $_POST['post_tr_lang'] ) );
+				}
 			}
-
-			$language = $this->model->get_language( sanitize_key( $_POST['post_lang_choice'] ) );
-
-			if ( empty( $language ) ) {
-				return;
-			}
-
-			$this->model->post->set_language( $post_id, $language );
-
-			if ( ! isset( $_POST['post_tr_lang'] ) ) {
-				return;
-			}
-
-			$this->save_translations( $post_id, array_map( 'absint', $_POST['post_tr_lang'] ) );
 		}
 	}
 
@@ -179,7 +169,7 @@ class PLL_Admin_Filters_Post extends PLL_Admin_Filters_Post_Base {
 				$post_ids = array_map( 'intval', (array) $_REQUEST['post'] );
 				foreach ( $post_ids as $post_id ) {
 					if ( current_user_can( 'edit_post', $post_id ) ) {
-						$this->model->post->set_language( $post_id, $lang );
+						$this->model->post->update_language( $post_id, $lang );
 					}
 				}
 			}
@@ -200,7 +190,7 @@ class PLL_Admin_Filters_Post extends PLL_Admin_Filters_Post_Base {
 			$post_id = (int) $_POST['post_ID'];
 			$lang = $this->model->get_language( sanitize_key( $_POST['inline_lang_choice'] ) );
 			if ( $post_id && $lang && current_user_can( 'edit_post', $post_id ) ) {
-				$this->model->post->set_language( $post_id, $lang );
+				$this->model->post->update_language( $post_id, $lang );
 			}
 		}
 	}

@@ -4,8 +4,9 @@
  */
 
 /**
- * Links model for use when the language code is added in the url as a subdomain
- * for example en.mysite.com/something.
+ * Links model for use when the language code is added in url as a subdomain
+ * for example en.mysite.com/something
+ * implements the "links_model interface"
  *
  * @since 1.2
  */
@@ -32,40 +33,38 @@ class PLL_Links_Subdomain extends PLL_Links_Abstract_Domain {
 
 	/**
 	 * Adds the language code in a url.
+	 * links_model interface.
 	 *
 	 * @since 1.2
-	 * @since 3.4 Accepts now a language slug.
 	 *
-	 * @param string                    $url      The url to modify.
-	 * @param PLL_Language|string|false $language Language object or slug.
-	 * @return string The modified url.
+	 * @param string       $url  The url to modify.
+	 * @param PLL_Language $lang The language object.
+	 * @return string Modified url.
 	 */
-	public function add_language_to_link( $url, $language ) {
-		if ( $language instanceof PLL_Language ) {
-			$language = $language->slug;
-		}
-
-		if ( ! empty( $language ) && false === strpos( $url, '://' . $language . '.' ) ) {
-			$url = $this->options['default_lang'] === $language && $this->options['hide_default'] ? $url : str_replace( $this->www, '://' . $language . '.', $url );
+	public function add_language_to_link( $url, $lang ) {
+		if ( ! empty( $lang ) && false === strpos( $url, '://' . $lang->slug . '.' ) ) {
+			$url = $this->options['default_lang'] == $lang->slug && $this->options['hide_default'] ? $url : str_replace( $this->www, '://' . $lang->slug . '.', $url );
 		}
 		return $url;
 	}
 
 	/**
-	 * Returns the url without the language code.
+	 * Returns the url without language code
+	 * links_model interface
 	 *
 	 * @since 1.2
 	 *
-	 * @param string $url The url to modify.
-	 * @return string The modified url.
+	 * @param string $url url to modify
+	 * @return string modified url
 	 */
 	public function remove_language_from_link( $url ) {
-		$languages = $this->model->get_languages_list(
-			array(
-				'hide_default' => $this->options['hide_default'],
-				'fields'       => 'slug',
-			)
-		);
+		$languages = array();
+
+		foreach ( $this->model->get_languages_list() as $language ) {
+			if ( ! $this->options['hide_default'] || $this->options['default_lang'] != $language->slug ) {
+				$languages[] = $language->slug;
+			}
+		}
 
 		if ( ! empty( $languages ) ) {
 			$url = preg_replace( '#://(' . implode( '|', $languages ) . ')\.#', $this->www, $url );
@@ -75,7 +74,7 @@ class PLL_Links_Subdomain extends PLL_Links_Abstract_Domain {
 	}
 
 	/**
-	 * Get the hosts managed on the website.
+	 * Get hosts managed on the website.
 	 *
 	 * @since 1.5
 	 *
@@ -84,8 +83,7 @@ class PLL_Links_Subdomain extends PLL_Links_Abstract_Domain {
 	public function get_hosts() {
 		$hosts = array();
 		foreach ( $this->model->get_languages_list() as $lang ) {
-			$host = wp_parse_url( $this->home_url( $lang ), PHP_URL_HOST );
-			$hosts[ $lang->slug ] = $host ? $host : '';
+			$hosts[ $lang->slug ] = wp_parse_url( $this->home_url( $lang ), PHP_URL_HOST );
 		}
 		return $hosts;
 	}

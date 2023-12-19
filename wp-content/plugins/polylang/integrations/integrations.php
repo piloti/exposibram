@@ -10,12 +10,11 @@
  * @since 1.0
  * @since 2.8 Renamed from PLL_Plugins_Compat to PLL_Integrations.
  */
-#[AllowDynamicProperties]
 class PLL_Integrations {
 	/**
 	 * Singleton instance.
 	 *
-	 * @var PLL_Integrations|null
+	 * @var PLL_Integrations
 	 */
 	protected static $instance;
 

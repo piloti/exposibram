@@ -16,14 +16,14 @@ class PLL_Admin_Filters_Columns {
 	public $model;
 
 	/**
-	 * @var PLL_Admin_Links|null
+	 * @var PLL_Admin_Links
 	 */
 	public $links;
 
 	/**
 	 * Language selected in the admin language filter.
 	 *
-	 * @var PLL_Language|null
+	 * @var PLL_Language
 	 */
 	public $filter_lang;
 

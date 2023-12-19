@@ -72,6 +72,19 @@ class PLL_Sitemaps extends PLL_Abstract_Sitemaps {
 	}
 
 	/**
+	 * Whitelists the home url filter for the sitemaps
+	 *
+	 * @since 2.8
+	 *
+	 * @param array $whitelist White list.
+	 * @return array
+	 */
+	public function home_url_white_list( $whitelist ) {
+		$whitelist[] = array( 'file' => 'class-wp-sitemaps-posts' );
+		return $whitelist;
+	}
+
+	/**
 	 * Filters the sitemaps rewrite rules to take the languages into account.
 	 *
 	 * @since 2.8
@@ -82,15 +95,14 @@ class PLL_Sitemaps extends PLL_Abstract_Sitemaps {
 	public function rewrite_rules( $rules ) {
 		global $wp_rewrite;
 
-		$languages = $this->model->get_languages_list(
-			array(
-				'fields'       => 'slug',
-				'hide_default' => $this->options['hide_default'],
-			)
-		);
+		$languages = $this->model->get_languages_list( array( 'fields' => 'slug' ) );
 
 		if ( empty( $languages ) ) {
 			return $rules;
+		}
+
+		if ( $this->options['hide_default'] ) {
+			$languages = array_diff( $languages, array( $this->options['default_lang'] ) );
 		}
 
 		$slug = $wp_rewrite->root . ( $this->options['rewrite'] ? '^' : '^language/' ) . '(' . implode( '|', $languages ) . ')/';

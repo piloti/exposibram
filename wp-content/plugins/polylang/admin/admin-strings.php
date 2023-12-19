@@ -24,7 +24,7 @@ class PLL_Admin_Strings {
 	/**
 	 * The strings to register by default.
 	 *
-	 * @var string[]|null
+	 * @var string[]
 	 */
 	protected static $default_strings;
 

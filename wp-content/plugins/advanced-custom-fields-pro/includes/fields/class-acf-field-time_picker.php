@@ -21,13 +21,10 @@ if ( ! class_exists( 'acf_field_time_picker' ) ) :
 		function initialize() {
 
 			// vars
-			$this->name          = 'time_picker';
-			$this->label         = __( 'Time Picker', 'acf' );
-			$this->category      = 'advanced';
-			$this->description   = __( 'An interactive UI for picking a time. The time format can be customized using the field settings.', 'acf' );
-			$this->preview_image = acf_get_url() . '/assets/images/field-type-previews/field-preview-time.png';
-			$this->doc_url       = acf_add_url_utm_tags( 'https://www.advancedcustomfields.com/resources/time-picker/', 'docs', 'field-type-selection' );
-			$this->defaults      = array(
+			$this->name     = 'time_picker';
+			$this->label    = __( 'Time Picker', 'acf' );
+			$this->category = 'jquery';
+			$this->defaults = array(
 				'display_format' => 'g:i a',
 				'return_format'  => 'g:i a',
 			);
@@ -82,7 +79,7 @@ if ( ! class_exists( 'acf_field_time_picker' ) ) :
 
 			// Output.
 			?>
-		<div <?php echo acf_esc_attrs( $div ); ?>>
+		<div <?php acf_esc_attr_e( $div ); ?>>
 			<?php acf_hidden_input( $hidden_input ); ?>
 			<?php acf_text_input( $text_input ); ?>
 		</div>
@@ -103,17 +100,19 @@ if ( ! class_exists( 'acf_field_time_picker' ) ) :
 		*
 		*  @param   $field  - an array holding all the field's data
 		*/
+
 		function render_field_settings( $field ) {
+
+			// vars
 			$g_i_a = date_i18n( 'g:i a' );
 			$H_i_s = date_i18n( 'H:i:s' );
 
-			echo '<div class="acf-field-settings-split">';
-
+			// display_format
 			acf_render_field_setting(
 				$field,
 				array(
 					'label'        => __( 'Display Format', 'acf' ),
-					'hint'         => __( 'The format displayed when editing a post', 'acf' ),
+					'instructions' => __( 'The format displayed when editing a post', 'acf' ),
 					'type'         => 'radio',
 					'name'         => 'display_format',
 					'other_choice' => 1,
@@ -125,11 +124,12 @@ if ( ! class_exists( 'acf_field_time_picker' ) ) :
 				)
 			);
 
+			// return_format
 			acf_render_field_setting(
 				$field,
 				array(
 					'label'        => __( 'Return Format', 'acf' ),
-					'hint'         => __( 'The format returned via template functions', 'acf' ),
+					'instructions' => __( 'The format returned via template functions', 'acf' ),
 					'type'         => 'radio',
 					'name'         => 'return_format',
 					'other_choice' => 1,
@@ -141,8 +141,8 @@ if ( ! class_exists( 'acf_field_time_picker' ) ) :
 				)
 			);
 
-			echo '</div>';
 		}
+
 
 		/*
 		*  format_value()
@@ -188,7 +188,7 @@ if ( ! class_exists( 'acf_field_time_picker' ) ) :
 			}
 
 			return $field;
-		}
+        }
 
 		/**
 		 * Return the schema array for the REST API.

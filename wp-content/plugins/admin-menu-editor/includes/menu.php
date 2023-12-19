@@ -86,11 +86,10 @@ abstract class ameMenu {
 			$menu['format']['is_normalized'] = true;
 		}
 
-		if ( isset($arr['color_css_modified']) ) {
-			$menu['color_css_modified'] = intval($arr['color_css_modified']);
-		}
-		if ( isset($arr['icon_color_overrides']) ) {
-			$menu['icon_color_overrides'] = $arr['icon_color_overrides'];
+		if ( isset($arr['color_css']) && is_string($arr['color_css']) ) {
+			$menu['color_css'] = $arr['color_css'];
+			$menu['color_css_modified'] = isset($arr['color_css_modified']) ? intval($arr['color_css_modified']) : 0;
+			$menu['icon_color_overrides'] = isset($arr['icon_color_overrides']) ? $arr['icon_color_overrides'] : null;
 		}
 
 		//Sanitize color presets.
@@ -408,13 +407,11 @@ abstract class ameMenu {
 			'custom_item_defaults' => ameMenuItem::custom_item_defaults(),
 		);
 
-		if ( !empty($menu['tree']) ) {
-			$menu['tree'] = self::map_items(
-				$menu['tree'],
-				array(__CLASS__, 'compress_item'),
-				array($common)
-			);
-		}
+		$menu['tree'] = self::map_items(
+			$menu['tree'],
+			array(__CLASS__, 'compress_item'),
+			array($common)
+		);
 
 		$menu = self::add_format_header($menu);
 		$menu['format']['compressed'] = true;

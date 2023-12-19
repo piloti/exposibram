@@ -21,12 +21,9 @@ if ( ! class_exists( 'acf_field_number' ) ) :
 		function initialize() {
 
 			// vars
-			$this->name          = 'number';
-			$this->label         = __( 'Number', 'acf' );
-			$this->description   = __( 'An input limited to numerical values.', 'acf' );
-			$this->preview_image = acf_get_url() . '/assets/images/field-type-previews/field-preview-number.png';
-			$this->doc_url       = acf_add_url_utm_tags( 'https://www.advancedcustomfields.com/resources/number/', 'docs', 'field-type-selection' );
-			$this->defaults      = array(
+			$this->name     = 'number';
+			$this->label    = __( 'Number', 'acf' );
+			$this->defaults = array(
 				'default_value' => '',
 				'min'           => '',
 				'max'           => '',
@@ -131,47 +128,8 @@ if ( ! class_exists( 'acf_field_number' ) ) :
 					'name'         => 'default_value',
 				)
 			);
-		}
 
-		/**
-		 * Renders the field settings used in the "Validation" tab.
-		 *
-		 * @since 6.0
-		 *
-		 * @param array $field The field settings array.
-		 * @return void
-		 */
-		function render_field_validation_settings( $field ) {
-			acf_render_field_setting(
-				$field,
-				array(
-					'label'        => __( 'Minimum Value', 'acf' ),
-					'instructions' => '',
-					'type'         => 'number',
-					'name'         => 'min',
-				)
-			);
-
-			acf_render_field_setting(
-				$field,
-				array(
-					'label'        => __( 'Maximum Value', 'acf' ),
-					'instructions' => '',
-					'type'         => 'number',
-					'name'         => 'max',
-				)
-			);
-		}
-
-		/**
-		 * Renders the field settings used in the "Presentation" tab.
-		 *
-		 * @since 6.0
-		 *
-		 * @param array $field The field settings array.
-		 * @return void
-		 */
-		function render_field_presentation_settings( $field ) {
+			// placeholder
 			acf_render_field_setting(
 				$field,
 				array(
@@ -182,16 +140,7 @@ if ( ! class_exists( 'acf_field_number' ) ) :
 				)
 			);
 
-			acf_render_field_setting(
-				$field,
-				array(
-					'label'        => __( 'Step Size', 'acf' ),
-					'instructions' => '',
-					'type'         => 'number',
-					'name'         => 'step',
-				)
-			);
-
+			// prepend
 			acf_render_field_setting(
 				$field,
 				array(
@@ -202,6 +151,7 @@ if ( ! class_exists( 'acf_field_number' ) ) :
 				)
 			);
 
+			// append
 			acf_render_field_setting(
 				$field,
 				array(
@@ -211,7 +161,42 @@ if ( ! class_exists( 'acf_field_number' ) ) :
 					'name'         => 'append',
 				)
 			);
+
+			// min
+			acf_render_field_setting(
+				$field,
+				array(
+					'label'        => __( 'Minimum Value', 'acf' ),
+					'instructions' => '',
+					'type'         => 'number',
+					'name'         => 'min',
+				)
+			);
+
+			// max
+			acf_render_field_setting(
+				$field,
+				array(
+					'label'        => __( 'Maximum Value', 'acf' ),
+					'instructions' => '',
+					'type'         => 'number',
+					'name'         => 'max',
+				)
+			);
+
+			// max
+			acf_render_field_setting(
+				$field,
+				array(
+					'label'        => __( 'Step Size', 'acf' ),
+					'instructions' => '',
+					'type'         => 'number',
+					'name'         => 'step',
+				)
+			);
+
 		}
+
 
 		/*
 		*  validate_value

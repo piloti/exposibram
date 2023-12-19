@@ -15,23 +15,16 @@ abstract class PLL_Admin_Filters_Post_Base {
 	public $model;
 
 	/**
-	 * @var PLL_Links|null
+	 * @var PLL_Links
 	 */
 	public $links;
 
 	/**
 	 * Language selected in the admin language filter.
 	 *
-	 * @var PLL_Language|null
+	 * @var PLL_Language
 	 */
 	public $filter_lang;
-
-	/**
-	 * Preferred language to assign to new contents.
-	 *
-	 * @var PLL_Language|null
-	 */
-	public $pref_lang;
 
 	/**
 	 * Constructor: setups filters and actions
